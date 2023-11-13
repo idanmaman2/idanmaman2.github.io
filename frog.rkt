@@ -1,12 +1,4 @@
-
 #lang frog/config
-
-
-
-
-
-
-
 
 (define/contract (init)
   (-> any)

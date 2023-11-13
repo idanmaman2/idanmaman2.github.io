@@ -13,7 +13,7 @@ that will include :
 @tabular[#:sep @hspace[1]
          (list (list @bold{Subject} @bold{Tools})
                (list "Emulation"       "Using UTM4-qemu with ubuntu server or arch")
-               (list "Virtualzion"       "Using VMWARE Fusion")
+               (list "Virtualization"       "Using VMWARE Fusion")
                (list "Terminal"       "Using Warp")
                (list "Reversing tools"       (string-join `("Ghidra"
                                                             "IDA"
@@ -26,24 +26,23 @@ that will include :
 
 <!-- more -->
 
-Here's  @hyperlink["http://bullshitipsum.com/?paragraphs=2"
-"Bullshit Ipsum"].
+@section[#:style 'unnumbered]{Emulation}
 
-Addelivery & integrate ecologies e-markets standards-compliant utilize
-technologies aggregate addelivery viral--communities dynamic
-functionalities. Mindshare engineer viral A-list: cross-platform remix
-engage social cross-media social innovate distributed matrix
-experiences monetize utilize innovative. Action-items transition
-recontextualize sexy Cluetrain envisioneer, "vortals communities
-evolve technologies sexy methodologies." Enhance grow compelling
-iterate architect matrix plug-and-play reinvent scale, distributed
-incentivize, extend.
+So Emulation in macos in the m series is a nightmare everthing is so slow if we are trying to use any graphicl feature or something like that . 
+this is why I recommend to install a server version or any os without desktop env . 
+Personaly I use Ubuntu server . 
 
-@section[#:style 'unnumbered]{A Section}
+@subsection[#:style 'unnumbered]{Setup}
 
-I am some text.
+So firstly you need to Install  
+@hyperlink["https://mac.getutm.app"
+"UTM"].
 
-@subsection[#:style 'unnumbered]{A SubSection}
+UTM is just a gui warpper of qemu - so if you are in kernel pwning just use qemu directly . 
+
+so after that we can add a machine - 
+
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-14 at 0.00.15.png"]
 
 A @racket[codeblock] uses curly braces and @emph{does} retain
 comments:

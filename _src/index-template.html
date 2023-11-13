@@ -1,12 +1,13 @@
-<article>
+<article style="margin-bottom:3vh;">
   <header>
     <h2><a href='@|uri-path|'>@|title|</a></h2>
-    <p class='date-and-tags'>@|date| :: @|tags|</p>
+    <p class='topics'>@|tags|</p>
+    <p class='date-and-tags'>@|date|</p>
     <p class='authors'>By: @|authors|</p>
   </header>
-  @|content-only|
   @(when more?
     @list{<footer>
-            <a href='@|uri-path|'>&hellip; more &hellip;</a>
+      
+            <button type="button" class="btn btn-warning" ><a href='@|uri-path|' >read this article</a></button>
           </footer>})
 </article>
