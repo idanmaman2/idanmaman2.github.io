@@ -7,7 +7,7 @@
 
 @centered{
     @bold{
-        @elem[#:style 'larger "Larger"]{
+        @elem[#:style 'larger ""]{
             My name is Idan , My age is 19 ,and  I have a Bs.c in computer science and I am seeking to learn new cool stuff especially low level. 
             This blog created from my own learning - any fixing or improvments can be sent throught pr or issue in the github page @hyperlink["https://github.com/idanmaman2/idanmaman2.github.io"
             "Here"].
@@ -36,7 +36,7 @@
     @hyperlink["https://github.com/idanmaman2/idanmaman2.github.io" (file-icon 50 60 "honeydew" #t)] 
 
 
-    
+
 }
 
 
