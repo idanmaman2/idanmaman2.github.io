@@ -107,10 +107,8 @@
                               (string-append uri-prefix
                                              "/index.html"))
             @list{
-              <h1>Welcome</h1>
-              <p>Here is some text that only goes on the home page,
-                because <code>@"@"uri-path</code> is
-                <code>/index.html</code>.</p> })
+              <h1>Sup reader ? </h1>
+              <p class="display-5 font-weight-light">Idan Maman's Personal Blog <i class="fa-solid fa-xl fa-kiwi-bird fa-shake"></i></p> })
           @;{ Index pages for posts have @tag that's not #f }
           @(when tag
             @list{<h1>Posts tagged <em>@|tag|</em></h1>})
