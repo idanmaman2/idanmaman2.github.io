@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">IDHM.Blog: Posts tagged 'Reversing'</title>
+ <link rel="self" href="http://www.githu.com/feeds/Reversing.atom.xml" />
+ <link href="http://www.githu.com/tags/Reversing.html" />
+ <id>urn:http-www-githu-com:-tags-Reversing-html</id>
+ <updated>2023-11-12T22:00:00Z</updated>
+ <entry>
+  <title type="text">My setup for apple M1/2</title>
+  <link rel="alternate" href="http://www.githu.com/2023/11/my-setup-for-apple-m1-2.html?utm_source=Reversing&amp;utm_medium=Atom" />
+  <id>urn:http-www-githu-com:-2023-11-my-setup-for-apple-m1-2-html</id>
+  <published>2023-11-12T22:00:00Z</published>
+  <updated>2023-11-12T22:00:00Z</updated>
+  <author>
+   <name>Idan Maman</name></author>
+  <content type="html">
+&lt;p&gt;The source of this post is Scribble format (not Markdown) - SO YEY I guess or somethind IDC.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div class="SIntrapara"&gt;So Today I am going to show you my setup .
+that will include :
+&lt;/div&gt;
+
+&lt;div class="SIntrapara"&gt;
+ &lt;table cellpadding="0" cellspacing="0"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span style="font-weight: bold"&gt;Subject&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span style="font-weight: bold"&gt;Tools&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;Emulation&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;Using UTM4-qemu with ubuntu server or arch&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;Virtualzion&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;Using VMWARE Fusion&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;Terminal&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;Using Warp&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p&gt;Reversing tools&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;&lt;span class="hspace"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;
+     &lt;p&gt;Ghidra , IDA , XELF Viewer , PortExgui , Pe Bear&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;a href="http://www.githu.com/2023/11/my-setup-for-apple-m1-2.html?utm_source=Reversing&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
