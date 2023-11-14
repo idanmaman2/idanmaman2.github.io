@@ -25,9 +25,6 @@ article img {
   height: auto;
 }
 
-
-
-
 @media screen and (min-width: 600px) {
     .gradient-text {
         font-size : 40px ; 
@@ -45,3 +42,14 @@ article img {
     }
 }
 
+
+@media screen and (min-width: 600px) {
+    .content_show {
+        margin-left:10vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    .content_show {
+        margin-left:0;
+    }
+}
