@@ -114,8 +114,9 @@ function animate() {
     mixer.update( delta );
     parrot.position.x = sx - 40  + Math.cos(angle1) * radius ;
     parrot.position.y= sy + Math.sin(angle1) *  radius ; 
-    parrot.position.z = sz + Math.sin(angle1) * radius ; 
+    parrot.position.z = sz+ Math.sin(angle1) * radius ; 
     parrot.rotation.x =  Math.cos(angle1) * Math.PI/3
+    parrot.rotation.x =  Math.cos(angle1) * Math.PI/6
 
   }
   

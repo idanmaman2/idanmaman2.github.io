@@ -94,7 +94,7 @@
     </nav>
 
 
-    <div class="container">
+    <div >
 
 
       <div style="position: relative;width: 100%; height: 100%">
@@ -102,7 +102,7 @@
           <canvas id="myCanvas" style="width: 100%; height: 100%"></canvas>
         </div>
 
-        <div  style="position: absolute; top: 0; left: 0;width: 100%; height: 100%" class="row">
+        <div class="container"  style="margin-left:10vw; position: absolute; top: 0; left: 0;width: 100%; height: 100%" class="row">
 
           <!-- Main column -->
           <div id="content" class="col-md-12">
@@ -146,6 +146,12 @@ that will include :
      <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Virtualization%29">Virtualization</a></p></td></tr>
    <tr>
     <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.Linux%29">Linux</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.Windows%29">Windows</a></p></td></tr>
+   <tr>
+    <td>
      <p><span class="hspace"></span></p></td></tr>
    <tr>
     <td>
@@ -164,6 +170,9 @@ that will include :
      <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Reversing_tools%29">Reversing tools</a></p></td></tr>
    <tr>
     <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.P.E_edit_tools%29">PE edit tools</a></p></td></tr>
+   <tr>
+    <td>
      <p><span class="hspace"></span></p></td></tr>
    <tr>
     <td>
@@ -180,7 +189,9 @@ that will include :
 
 <p>So Emulation in macos in the m series is a nightmare everthing is so slow if we are trying to use any graphicl feature or something like that .
 this is why I recommend to install a server version or any os without desktop env .
-Personaly I use Ubuntu server .</p>
+Personaly I use Ubuntu server .
+any kind of modern windows will not be useable !!!
+only old version like xp or 95 .</p>
 
 <h2><a name="(part._.Setup)"></a>Setup</h2>
 
@@ -214,11 +225,37 @@ Personaly I use Ubuntu server .</p>
 
 <h1><a name="(part._.Virtualization)"></a>Virtualization</h1>
 
+<p>For Virtualization I am using VMWare Fusion(12)
+<img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-14%20at%2021.33.58.png" alt="" height="1772" width="2042" />
+Personaly I am using Windows 11 and Fedora .
+Disclaimer: Windows 11 arm is sucks - you can&rsquo;t use a lot of tools becuase you can&rsquo;t run x64 drivers and any type of Remote process memory write didnt work for me in windows arm so a lot of tools like cmder doesn&rsquo;t work as well .</p>
+
+<h2><a name="(part._.Linux)"></a>Linux</h2>
+
+<p><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-14%20at%2021.37.44.png" alt="" height="1912" width="2940" /></p>
+
+<h2><a name="(part._.Windows)"></a>Windows</h2>
+
+<p><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-14%20at%2021.39.10.png" alt="" height="1912" width="2940" /></p>
+
 <h1><a name="(part._.Terminal)"></a>Terminal</h1>
+
+<p>At start I used the default terminal for a while - it is pretty nice but <span style="font-weight: bold">Warp</span>
+is a major upgrade to that .
+link to warp : <a href="warp.dev"></a>
+so with warp you have AI chat  , tmux like windows spliting , warp supporting ssh with bash/fish/zsh - that means you can use all warp&rsquo;s features with your remote machine .
+so it is pretty cool and have a realy nice gui and text complete so try it !</p>
 
 <h1><a name="(part._.Docker)"></a>Docker</h1>
 
+<p>so I can&rsquo;t say much - it works pretty nice , you can emualte x86 containers or use arm
+it is not uses the native kernel it is Virtualalized but it still works great .</p>
+
 <h1><a name="(part._.Reversing_tools)"></a>Reversing tools</h1>
+
+<p>so that is going to be a long section :</p>
+
+<h2><a name="(part._.P.E_edit_tools)"></a>PE edit tools</h2>
 
 <h1><a name="(part._.Developing)"></a>Developing</h1>
 

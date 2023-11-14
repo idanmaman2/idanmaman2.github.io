@@ -108,7 +108,7 @@
     </nav>
 
 
-    <div class="container">
+    <div >
 
 
       <div style="position: relative;width: 100%; height: 100%">
@@ -116,7 +116,7 @@
           <canvas id="myCanvas" style="width: 100%; height: 100%"></canvas>
         </div>
   
-        <div  style="position: absolute; top: 0; left: 0;width: 100%; height: 100%" class="row">
+        <div class="container"  style="margin-left:10vw; position: absolute; top: 0; left: 0;width: 100%; height: 100%" class="row">
           @;{ Remember that Twitter Bootstrap has a 12 cell model. The
               col-md-N classes should add up to 12.  For instance 3
               "col-md-4" divs, or 2 "col-md-6" divs. }
@@ -126,7 +126,7 @@
                                 (string-append uri-prefix
                                                "/index.html"))
               @list{
-                <h1>Sup reader ? </h1>
+                <h1>SUPDAWG? </h1>
                 <p class="display-5 font-weight-light">Idan Maman's Personal Blog <i class="fa-solid fa-xl fa-kiwi-bird "></i></p> })
             @;{ Index pages for posts have @tag that's not #f }
             @(when tag

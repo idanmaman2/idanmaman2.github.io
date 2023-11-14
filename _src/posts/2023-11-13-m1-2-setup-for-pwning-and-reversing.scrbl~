@@ -60,7 +60,7 @@ Disclaimer: Windows 11 arm is sucks - you can't use a lot of tools becuase you c
 @section[#:style 'unnumbered]{Terminal}
 At start I used the default terminal for a while - it is pretty nice but @bold{Warp}
 is a major upgrade to that . 
-link to warp : @hyperlink["warp.dev"]
+link to warp : @hyperlink[warp.dev]
 so with warp you have AI chat  , tmux like windows spliting , warp supporting ssh with bash/fish/zsh - that means you can use all warp's features with your remote machine . 
 so it is pretty cool and have a realy nice gui and text complete so try it ! 
 @section[#:style 'unnumbered]{Docker}
