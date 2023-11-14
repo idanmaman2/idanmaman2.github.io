@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'OrbitControls';
 import { GLTFLoader } from 'GLTFLoader';
 const myCanvas = document.querySelector('#myCanvas');
-const axes = new THREE.AxesHelper();
+
 
 
 var clock = new THREE.Clock();
@@ -19,7 +19,7 @@ if(window.matchMedia("(max-width: 600px)").matches) {
 }
 
 const scene = new THREE.Scene();
-scene.add(axes);
+
 var parrot ; 
 
 const camera = new THREE.PerspectiveCamera(
