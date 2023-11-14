@@ -3,7 +3,7 @@ import { OrbitControls } from 'OrbitControls';
 import { GLTFLoader } from 'GLTFLoader';
 const myCanvas = document.querySelector('#myCanvas');
 const axes = new THREE.AxesHelper();
-
+renderer.autoClear = false;
 
 var clock = new THREE.Clock();
 var mixer ; 
@@ -108,7 +108,7 @@ var ptime = 0;
 function animate() {
   let convertToRad = (angle)=> (angle/180) * Math.PI/180
   requestAnimationFrame( animate );
-  
+  renderer.clearDepth();
   var delta = clock.getDelta();
   ptime++;
   var time = ptime / 100 ;
