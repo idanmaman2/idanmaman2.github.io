@@ -13,15 +13,15 @@
       }
     </script>
 
-    <title>My setup for apple M1/2</title>
-    <meta name="description" content="The source of this post is Scribble format (not Markdown) - SO YEY I guess or somethind IDC.    So Today I am going to show you my setup . that will include :                           Emulation            Setup                        Virtualization      ...">
+    <title>HI - Blog setup</title>
+    <meta name="description" content="So in this Post I will show How I setted up my blog ....">
     <meta name="author"      content="Idan Maman">
-    <meta name="keywords"    content="M1, M2, Pwning, Reversing">
+    <meta name="keywords"    content="Racket, Frog, Scribble, MD, Blog">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.githu.com/2023/11/my-setup-for-apple-m1-2.html">
-    <link rel="next" href="/2023/11/hi-blog-setup.html">
+    <link rel="canonical" href="http://www.githu.com/2023/11/hi-blog-setup.html">
 
+    <link rel="prev" href="/2023/11/my-setup-for-apple-m1-2.html">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -114,117 +114,14 @@
 
             <article>
   <header>
-    <h1>My setup for apple M1/2</h1>
+    <h1>HI - Blog setup</h1>
     <p class='date-and-tags'>
-<time datetime="2023-11-14" pubdate="true">2023-11-14</time> :: <span class="tags"><a href="/tags/M1.html">M1</a>, <a href="/tags/M2.html">M2</a>, <a href="/tags/Pwning.html">Pwning</a>, <a href="/tags/Reversing.html">Reversing</a></span></p>
+<time datetime="2023-11-13" pubdate="true">2023-11-13</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/Frog.html">Frog</a>, <a href="/tags/Scribble.html">Scribble</a>, <a href="/tags/MD.html">MD</a>, <a href="/tags/Blog.html">Blog</a></span></p>
     <p class='authors'>By: <span class="authors">Idan Maman</span></p>
   </header>
 
-<p>The source of this post is Scribble format (not Markdown) - SO YEY I guess or somethind IDC.</p>
-
-<p></p>
-
-<div class="SIntrapara">So Today I am going to show you my setup .
-that will include :
-</div>
-
-<div class="SIntrapara">
- <table cellpadding="0" cellspacing="0">
-  <tbody>
-   <tr>
-    <td>
-     <p><span class="hspace"></span></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Emulation%29">Emulation</a></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.Setup%29">Setup</a></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace"></span></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Virtualization%29">Virtualization</a></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace"></span></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Terminal%29">Terminal</a></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace"></span></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Docker%29">Docker</a></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace"></span></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Reversing_tools%29">Reversing tools</a></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace"></span></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Developing%29">Developing</a></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace"></span></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Etc%29">Etc</a></p></td></tr></tbody></table></div>
+<p>So in this Post I will show How I setted up my blog .</p>
 <!--more-->
-
-<h1><a name="(part._.Emulation)"></a>Emulation</h1>
-
-<p>So Emulation in macos in the m series is a nightmare everthing is so slow if we are trying to use any graphicl feature or something like that .
-this is why I recommend to install a server version or any os without desktop env .
-Personaly I use Ubuntu server .</p>
-
-<h2><a name="(part._.Setup)"></a>Setup</h2>
-
-<p>So firstly you need to Install
-<a href="https://mac.getutm.app">UTM</a>.</p>
-
-<p>UTM is just a gui warpper of qemu - so if you are in kernel pwning just use qemu directly .</p>
-
-<p>so after that we can add a machine -</p>
-
-<p><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-14%20at%200.00.15.png" alt="" height="1836" width="1588" /></p>
-
-<p>Or if we want to directly use qemu - just</p>
-
-<div class="brush: bash">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal">1</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span>qemu-system-x86_64<span class="w"> </span>disk_image
-</pre></div></td></tr></tbody></table></div>
-
-</div>
-
-<p>later on I will show more things about qenu - this is the most basic form .</p>
-
-<h1><a name="(part._.Virtualization)"></a>Virtualization</h1>
-
-<h1><a name="(part._.Terminal)"></a>Terminal</h1>
-
-<h1><a name="(part._.Docker)"></a>Docker</h1>
-
-<h1><a name="(part._.Reversing_tools)"></a>Reversing tools</h1>
-
-<h1><a name="(part._.Developing)"></a>Developing</h1>
-
-<h1><a name="(part._.Etc)"></a>Etc</h1>
   <footer>
 
   </footer>

@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 Title: My setup for apple M1/2
-Date: 2023-11-13T00:00:00
+Date: 2023-11-14T16:58:33
 Tags: M1,M2,Pwning,Reversing
 
 @(require (for-label racket))

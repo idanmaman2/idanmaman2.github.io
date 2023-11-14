@@ -1,12 +1,10 @@
 #lang scribble/manual
 
-Title: HI
-Date: 2023-11-14T16:58:33
-Tags: TEST
+Title: HI - Blog setup
+Date: 2023-11-13T00:00:00
+Tags: Racket,Frog,Scribble,MD,Blog
 
-Replace this with your post text. Add one or more comma-separated
-Tags above. The special tag `DRAFT` will prevent the post from being
-published.
+So in this Post I will show How I setted up my blog . 
 
 <!-- more -->
 
