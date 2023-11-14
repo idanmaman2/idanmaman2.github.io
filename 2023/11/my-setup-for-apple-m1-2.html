@@ -3,15 +3,25 @@
   <head>
 
     <meta charset="utf-8">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/css/threejs/three.module.js" ,
+          "OrbitControls" : "/css/threejs/plugins/OrbitControls.js" ,
+          "GLTFLoader" : "/css/threejs/plugins/GLTFLoader.js"
+        }
+      }
+    </script>
+
     <title>My setup for apple M1/2</title>
-    <meta name="description" content="The source of this post is Scribble format (not Markdown) - SO YEY I guess or somethind IDC.    So Today I am going to show you my setup . that will include :               Subject                   Tools            Emulation                   Using UTM4-...">
+    <meta name="description" content="The source of this post is Scribble format (not Markdown) - SO YEY I guess or somethind IDC.    So Today I am going to show you my setup . that will include :                           Emulation            Setup                        Virtualization      ...">
     <meta name="author"      content="Idan Maman">
     <meta name="keywords"    content="M1, M2, Pwning, Reversing">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.githu.com/2023/11/my-setup-for-apple-m1-2.html">
 
-
+    <link rel="prev" href="/2023/11/hi.html">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -21,7 +31,6 @@
     <link href="/css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
     <link href="/css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
     <link href="/css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
-
     <!-- Feeds -->
     <link rel="alternate" type="application/atom+xml"
           href="/feeds/all.atom.xml" title="Atom Feed">
@@ -65,7 +74,7 @@
               </a>
 
               <div class="dropdown-menu">
-                <a class="dropdown-item text-dark" href="/tags/M1.html">M1</a><a class="dropdown-item text-dark" href="/tags/M2.html">M2</a><a class="dropdown-item text-dark" href="/tags/Pwning.html">Pwning</a><a class="dropdown-item text-dark" href="/tags/Reversing.html">Reversing</a>
+                <a class="dropdown-item text-dark" href="/tags/IDK.html">IDK</a><a class="dropdown-item text-dark" href="/tags/M1.html">M1</a><a class="dropdown-item text-dark" href="/tags/M2.html">M2</a><a class="dropdown-item text-dark" href="/tags/Pwning.html">Pwning</a><a class="dropdown-item text-dark" href="/tags/Reversing.html">Reversing</a>
               </div>
             </li>
 
@@ -88,15 +97,22 @@
 
 
     <div class="container">
-      <div class="row">
-
-        <!-- Main column -->
-        <div id="content" class="col-md-12">
 
 
+      <div style="position: relative;width: 100%; height: 100%">
+        <div  style="position: fixed;width: 100%; height: 100%">
+          <canvas id="myCanvas" style="width: 100%; height: 100%"></canvas>
+        </div>
+
+        <div  style="position: absolute; top: 0; left: 0;width: 100%; height: 100%" class="row">
+
+          <!-- Main column -->
+          <div id="content" class="col-md-12">
 
 
-          <article>
+
+
+            <article>
   <header>
     <h1>My setup for apple M1/2</h1>
     <p class='date-and-tags'>
@@ -117,39 +133,49 @@ that will include :
   <tbody>
    <tr>
     <td>
-     <p><span style="font-weight: bold">Subject</span></p></td>
-    <td>
-     <p><span class="hspace">&nbsp;</span></p></td>
-    <td>
-     <p><span style="font-weight: bold">Tools</span></p></td></tr>
+     <p><span class="hspace"></span></p></td></tr>
    <tr>
     <td>
-     <p>Emulation</p></td>
-    <td>
-     <p><span class="hspace">&nbsp;</span></p></td>
-    <td>
-     <p>Using UTM4-qemu with ubuntu server or arch</p></td></tr>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Emulation%29">Emulation</a></p></td></tr>
    <tr>
     <td>
-     <p>Virtualization</p></td>
-    <td>
-     <p><span class="hspace">&nbsp;</span></p></td>
-    <td>
-     <p>Using VMWARE Fusion</p></td></tr>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.Setup%29">Setup</a></p></td></tr>
    <tr>
     <td>
-     <p>Terminal</p></td>
-    <td>
-     <p><span class="hspace">&nbsp;</span></p></td>
-    <td>
-     <p>Using Warp</p></td></tr>
+     <p><span class="hspace"></span></p></td></tr>
    <tr>
     <td>
-     <p>Reversing tools</p></td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Virtualization%29">Virtualization</a></p></td></tr>
+   <tr>
     <td>
-     <p><span class="hspace">&nbsp;</span></p></td>
+     <p><span class="hspace"></span></p></td></tr>
+   <tr>
     <td>
-     <p>Ghidra , IDA , XELF Viewer , PortExgui , Pe Bear</p></td></tr></tbody></table></div>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Terminal%29">Terminal</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace"></span></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Docker%29">Docker</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace"></span></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Reversing_tools%29">Reversing tools</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace"></span></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Developing%29">Developing</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace"></span></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Etc%29">Etc</a></p></td></tr></tbody></table></div>
 <!--more-->
 
 <h1><a name="(part._.Emulation)"></a>Emulation</h1>
@@ -169,197 +195,48 @@ Personaly I use Ubuntu server .</p>
 
 <p><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-14%20at%200.00.15.png" alt="" height="1836" width="1588" /></p>
 
-<p>A <span class="RktSym">codeblock</span> uses curly braces and <span class="emph">does</span> retain
-comments:</p>
+<p>Or if we want to directly use qemu - just</p>
 
-<div class="SCodeFlow">
- <table cellpadding="0" cellspacing="0" class="RktBlk">
-  <tbody>
-   <tr>
-    <td><span class="RktCmt">;;</span><span class="hspace">&nbsp;</span><span class="RktCmt">Finds</span><span class="hspace">&nbsp;</span><span class="RktCmt">Racket</span><span class="hspace">&nbsp;</span><span class="RktCmt">sources</span><span class="hspace">&nbsp;</span><span class="RktCmt">in</span><span class="hspace">&nbsp;</span><span class="RktCmt">all</span><span class="hspace">&nbsp;</span><span class="RktCmt">subdirs</span><span class="RktMeta"></span></td></tr>
-   <tr>
-    <td><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%29%29">for</a></span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktPn">[</span><span class="RktSym">path</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/sequences.html#%28def._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._in-directory%29%29">in-directory</a></span><span class="RktPn">)</span><span class="RktPn">]</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
-   <tr>
-    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/when_unless.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._when%29%29">when</a></span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/regexp.html#%28def._%28%28quote._~23~25kernel%29._regexp-match~3f%29%29">regexp-match?</a></span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktVal">#rx"[.]rkt$"</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">path</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
-   <tr>
-    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/Writing.html#%28def._%28%28quote._~23~25kernel%29._printf%29%29">printf</a></span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktVal">"source</span><span class="hspace">&nbsp;</span><span class="RktVal">file:</span><span class="hspace">&nbsp;</span><span class="RktVal">~a\n"</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">path</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
-   <tr>
-    <td><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">(</span><span class="RktSym">foo</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktPn">#:bar</span><span class="RktMeta"></span><span class="hspace">&nbsp;</span><span class="RktMeta"></span><span class="RktSym">bar</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr>
-   <tr>
-    <td><span class="RktMeta"></span><span class="hspace">&nbsp;&nbsp;</span><span class="RktMeta"></span><span class="RktVal">#t</span><span class="RktPn">)</span><span class="RktMeta"></span></td></tr></tbody></table></div>
+<div class="brush: bash">
+ <pre><code>qemu-system-x86_64 disk_image</code></pre></div>
 
-<p>A <span class="RktSym">racketblock</span> uses square brackets and does <span class="emph">not</span>
-retain comments:</p>
+<p>later on I will show more things about qenu - this is the most basic form .</p>
 
-<div class="SCodeFlow">
- <table cellpadding="0" cellspacing="0" class="RktBlk">
-  <tbody>
-   <tr>
-    <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%29%29">for</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktPn">[</span><span class="RktSym">path</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/sequences.html#%28def._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._in-directory%29%29">in-directory</a></span><span class="RktPn">)</span><span class="RktPn">]</span><span class="RktPn">)</span></td></tr>
-   <tr>
-    <td><span class="hspace">&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/when_unless.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._when%29%29">when</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/regexp.html#%28def._%28%28quote._~23~25kernel%29._regexp-match~3f%29%29">regexp-match?</a></span><span class="hspace">&nbsp;</span><span class="RktVal">#rx"[.]rkt$"</span><span class="hspace">&nbsp;</span><span class="RktSym">path</span><span class="RktPn">)</span></td></tr>
-   <tr>
-    <td><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/Writing.html#%28def._%28%28quote._~23~25kernel%29._printf%29%29">printf</a></span><span class="hspace">&nbsp;</span><span class="RktVal">"source file: ~a\n"</span><span class="hspace">&nbsp;</span><span class="RktSym">path</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr>
-   <tr>
-    <td><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">foo</span><span class="hspace">&nbsp;</span><span class="RktPn">#:bar</span><span class="hspace">&nbsp;</span><span class="RktSym">bar</span><span class="RktPn">)</span></td></tr>
-   <tr>
-    <td><span class="hspace">&nbsp;&nbsp;</span><span class="RktVal">#t</span><span class="RktPn">)</span></td></tr></tbody></table></div>
+<h1><a name="(part._.Virtualization)"></a>Virtualization</h1>
 
-<p>Here is a <span class="RktSym">interaction</span>:</p>
+<h1><a name="(part._.Terminal)"></a>Terminal</h1>
 
-<div class="SCodeFlow">
- <table cellpadding="0" cellspacing="0" class="RktBlk">
-  <tbody>
-   <tr>
-    <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym">:</span><span class="hspace">&nbsp;</span><span class="RktSym">my-sqr</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">Real</span><span class="hspace">&nbsp;</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/function-contracts.html#%28form._%28%28lib._racket%2Fcontract%2Fbase..rkt%29._-~3e%29%29"><span class="nobreak">-&gt;</span></a></span><span class="hspace">&nbsp;</span><span class="RktSym">Real</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr>
-   <tr>
-    <td>
-     <table cellpadding="0" cellspacing="0" class="RktBlk">
-      <tbody>
-       <tr>
-        <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">my-sqr</span><span class="hspace">&nbsp;</span><span class="RktSym">x</span><span class="RktPn">)</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/generic-numbers.html#%28def._%28%28quote._~23~25kernel%29._%2A%29%29">*</a></span><span class="hspace">&nbsp;</span><span class="RktSym">x</span><span class="hspace">&nbsp;</span><span class="RktSym">x</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr></tbody></table></td></tr>
-   <tr>
-    <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym">my-sqr</span><span class="hspace">&nbsp;</span><span class="RktVal">42</span><span class="RktPn">)</span></td></tr>
-   <tr>
-    <td>
-     <p><span class="RktOut">- : Real</span></p></td></tr>
-   <tr>
-    <td>
-     <p><span class="RktRes">1764</span></p></td></tr></tbody></table></div>
+<h1><a name="(part._.Docker)"></a>Docker</h1>
 
-<p>Here&rsquo;s a fancier one:</p>
+<h1><a name="(part._.Reversing_tools)"></a>Reversing tools</h1>
 
-<div class="SCodeFlow">
- <table cellpadding="0" cellspacing="0" class="RktBlk">
-  <tbody>
-   <tr>
-    <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/require.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._require%29%29">require</a></span><span class="hspace">&nbsp;</span><span class="RktSym">slideshow/pict</span><span class="RktPn">)</span></td></tr>
-   <tr>
-    <td>
-     <table cellpadding="0" cellspacing="0" class="RktBlk">
-      <tbody>
-       <tr>
-        <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/define.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._define%29%29">define</a></span><span class="hspace">&nbsp;</span><span class="RktSym">rainbow-colors</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="hspace">&nbsp;&nbsp;</span><span class="RktVal">'</span><span class="RktVal">(</span><span class="RktVal">"red"</span><span class="hspace">&nbsp;</span><span class="RktVal">"orange"</span><span class="hspace">&nbsp;</span><span class="RktVal">"yellow"</span><span class="hspace">&nbsp;</span><span class="RktVal">"green"</span><span class="hspace">&nbsp;</span><span class="RktVal">"blue"</span><span class="hspace">&nbsp;</span><span class="RktVal">"purple"</span><span class="RktVal">)</span><span class="RktPn">)</span></td></tr></tbody></table></td></tr>
-   <tr>
-    <td>
-     <table cellpadding="0" cellspacing="0" class="RktBlk">
-      <tbody>
-       <tr>
-        <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%2Flist%29%29">for/list</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktPn">[</span><span class="RktSym">c</span><span class="hspace">&nbsp;</span><span class="RktSym">rainbow-colors</span><span class="RktPn">]</span><span class="RktPn">)</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="hspace">&nbsp;&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym">colorize</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">filled-rounded-rectangle</span><span class="hspace">&nbsp;</span><span class="RktVal">20</span><span class="hspace">&nbsp;</span><span class="RktVal">20</span><span class="RktPn">)</span><span class="hspace">&nbsp;</span><span class="RktSym">c</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr></tbody></table></td></tr>
-   <tr>
-    <td>
-     <p><span class="RktRes">'(</span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_2.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_3.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_4.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_5.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_6.png" alt="image" height="26.0" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="26.0" /><span class="RktRes">)</span></p></td></tr>
-   <tr>
-    <td>
-     <table cellpadding="0" cellspacing="0" class="RktBlk">
-      <tbody>
-       <tr>
-        <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym"><a class="RktStxLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/for.html#%28form._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._for%2Flist%29%29">for/list</a></span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktPn">[</span><span class="RktSym">c</span><span class="hspace">&nbsp;</span><span class="RktSym">rainbow-colors</span><span class="RktPn">]</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktPn">[</span><span class="RktSym">dir</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym"><a class="RktValLink Sq" data-pltdoc="x" href="https://docs.racket-lang.org/reference/sequences.html#%28def._%28%28lib._racket%2Fprivate%2Fbase..rkt%29._in-cycle%29%29">in-cycle</a></span><span class="hspace">&nbsp;</span><span class="RktVal">'</span><span class="RktVal">(</span><span class="RktVal">right</span><span class="hspace">&nbsp;</span><span class="RktVal">left</span><span class="RktVal">)</span><span class="RktPn">)</span><span class="RktPn">]</span><span class="RktPn">)</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="hspace">&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym">standard-fish</span><span class="hspace">&nbsp;</span><span class="RktVal">25</span><span class="hspace">&nbsp;</span><span class="RktVal">25</span><span class="hspace">&nbsp;</span><span class="RktPn">#:color</span><span class="hspace">&nbsp;</span><span class="RktSym">c</span><span class="hspace">&nbsp;</span><span class="RktPn">#:direction</span><span class="hspace">&nbsp;</span><span class="RktSym">dir</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr></tbody></table></td></tr>
-   <tr>
-    <td>
-     <p><span class="RktRes">'(</span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_7.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_8.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_9.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_10.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_11.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /><span class="RktRes"></span><span class="hspace">&nbsp;</span><span class="RktRes"></span><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_12.png" alt="image" height="31" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="31" /><span class="RktRes">)</span></p></td></tr>
-   <tr>
-    <td>
-     <table cellpadding="0" cellspacing="0" class="RktBlk">
-      <tbody>
-       <tr>
-        <td><span class="stt">&gt; </span><span class="RktPn">(</span><span class="RktSym">cc-superimpose</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">cc-superimpose</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">cloud</span><span class="hspace">&nbsp;</span><span class="RktVal">100</span><span class="hspace">&nbsp;</span><span class="RktVal">80</span><span class="hspace">&nbsp;</span><span class="RktVal">"lightblue"</span><span class="RktPn">)</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym">cloud</span><span class="hspace">&nbsp;</span><span class="RktVal">90</span><span class="hspace">&nbsp;</span><span class="RktVal">70</span><span class="hspace">&nbsp;</span><span class="RktVal">"white"</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="hspace">&nbsp;</span><span class="RktPn">(</span><span class="RktSym">hc-append</span><span class="hspace">&nbsp;</span><span class="RktVal">10</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="hspace">&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym">standard-fish</span><span class="hspace">&nbsp;</span><span class="RktVal">30</span><span class="hspace">&nbsp;</span><span class="RktVal">30</span><span class="hspace">&nbsp;</span><span class="RktPn">#:color</span><span class="hspace">&nbsp;</span><span class="RktVal">"red"</span><span class="hspace">&nbsp;</span><span class="RktPn">#:direction</span><span class="hspace">&nbsp;</span><span class="RktVal">'</span><span class="RktVal">right</span><span class="RktPn">)</span></td></tr>
-       <tr>
-        <td><span class="hspace">&nbsp;&nbsp;</span><span class="hspace">&nbsp;&nbsp;</span><span class="RktPn">(</span><span class="RktSym">standard-fish</span><span class="hspace">&nbsp;</span><span class="RktVal">25</span><span class="hspace">&nbsp;</span><span class="RktVal">20</span><span class="hspace">&nbsp;</span><span class="RktPn">#:color</span><span class="hspace">&nbsp;</span><span class="RktVal">"blue"</span><span class="hspace">&nbsp;</span><span class="RktPn">#:direction</span><span class="hspace">&nbsp;</span><span class="RktVal">'</span><span class="RktVal">left</span><span class="RktPn">)</span><span class="RktPn">)</span><span class="RktPn">)</span></td></tr></tbody></table></td></tr>
-   <tr>
-    <td>
-     <p><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/pict_13.png" alt="image" height="86" style="vertical-align: 0px; margin: -3px -3px -3px -3px;" width="106" /></p></td></tr></tbody></table></div>
+<h1><a name="(part._.Developing)"></a>Developing</h1>
 
-<p>Here&rsquo;s an example of using Pygments to syntax highlight non-Racket
-code:</p>
-
-<div class="brush: js">
- <pre><code>function foo() {
-  return 7;
-}</code></pre></div>
+<h1><a name="(part._.Etc)"></a>Etc</h1>
   <footer>
-    <script type="text/javascript">
-      !function(d,s,id){
-          var js,fjs=d.getElementsByTagName(s)[0];
-          if(!d.getElementById(id)){
-              js=d.createElement(s);
-              js.id=id;
-              js.src="//platform.twitter.com/widgets.js";
-              fjs.parentNode.insertBefore(js,fjs);
-          }
-      }(document,"script","twitter-wjs");
-    </script>
-    <a href="https://twitter.com/share"
-       class="twitter-share-button"
-       data-url="http://www.githu.com/2023/11/my-setup-for-apple-m1-2.html"
-       data-dnt="true">
-      "Tweet"</a>
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <g:plusone size="medium" href="http://www.githu.com/2023/11/my-setup-for-apple-m1-2.html"></g:plusone>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      var disqus_config = function () {
-        this.page.identifier = undefined;
-        this.page.url = undefined;
-        this.page.title = undefined;
-        this.page.category_id = undefined;
-      };
-      var disqus_shortname = 'shortname';
-      (function() {
-          var dsq = document.createElement('script');
-          dsq.type = 'text/javascript';
-          dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          dsq.setAttribute('data-timestamp', +new Date());
-          (document.head || document.body).appendChild(dsq);
-      })();
-    </script>
-    <noscript>
-      Please enable JavaScript to view the
-      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
-    <div class="row justify-content-center">
-      <nav aria-label="Page Navigation">
-        <ul class="pagination">
 
-
-        </ul>
-      </nav>
-    </div>
   </footer>
 </article>
+
+          </div>
+          <footer>
+            <hr />
+            <p ><a  href="https://t.me/IdanMaman" target="blank" title="social telegram"><i class="fa-brands fa-bounce fa-xl  fa-telegram"></i></a>
+                <a  href="https://github.com/idanmaman2" target="blank" title="social github"><i class="fa-brands fa-bounce fa-xl  fa-github"></i></a>
+                <a  href="https://twitter.com/idanmaman451180" target="blank" title="social twitter"><i class="fa-brands fa-bounce fa-xl  fa-twitter"></i></a>
+            </p>
+            <p>Site generated
+            by <a href="https://github.com/greghendershott/frog">Frog</a>,
+            the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+            <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+            <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
+          </footer>
         </div>
       </div>
-      <footer>
-        <hr />
-        <p ><a  href="https://t.me/IdanMaman" target="blank" title="social telegram"><i class="fa-brands fa-bounce fa-xl  fa-telegram"></i></a>
-            <a  href="https://github.com/idanmaman2" target="blank" title="social github"><i class="fa-brands fa-bounce fa-xl  fa-github"></i></a>
-            <a  href="https://twitter.com/idanmaman451180" target="blank" title="social twitter"><i class="fa-brands fa-bounce fa-xl  fa-twitter"></i></a>
-        </p>
-        <p>Site generated
-        by <a href="https://github.com/greghendershott/frog">Frog</a>,
-        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
-        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
-        <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
-      </footer>
+
+
+
+
     </div>
     <!-- </body> JS -->
     <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>

@@ -28,7 +28,7 @@
 
 @(map 
     (lambda (x) @linebreak[] )
-    (range 10))
+    (range 5))
     
 @list{
     CV
