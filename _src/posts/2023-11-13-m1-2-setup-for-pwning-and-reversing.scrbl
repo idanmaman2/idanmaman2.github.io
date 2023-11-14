@@ -17,6 +17,7 @@ that will include :
 
 @section[#:style 'unnumbered]{Emulation}
 
+
 So Emulation in macos in the m series is a nightmare everthing is so slow if we are trying to use any graphicl feature or something like that . 
 this is why I recommend to install a server version or any os without desktop env . 
 Personaly I use Ubuntu server . 
