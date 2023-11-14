@@ -11,6 +11,13 @@ var parrot ;
 var sx,sy,sz ; 
 var factor = 1 ; 
 var radius = 100 ; 
+var shift_x = 0 ; 
+var shift_y =0 ; 
+if(window.matchMedia("(max-width: 600px)").matches) {
+  radius = 50 ; 
+  shift_x = 20 ; 
+}
+
 const scene = new THREE.Scene();
 scene.add(axes);
 var parrot ; 
@@ -112,8 +119,8 @@ function animate() {
   var [angle1 , angle2 ] = [time  , time] ; 
   if ( mixer ) {
     mixer.update( delta );
-    parrot.position.x = sx - 40  + Math.cos(angle1) * radius ;
-    parrot.position.y= sy + Math.sin(angle1) *  radius ; 
+    parrot.position.x = sx + shift_x - 40  + Math.cos(angle1) * radius ;
+    parrot.position.y= sy + shift_y+ Math.sin(angle1) *  radius ; 
     parrot.position.z = sz+ Math.sin(angle1) * radius ; 
     parrot.rotation.x =  Math.cos(angle1) * Math.PI/3
     parrot.rotation.x =  Math.cos(angle1) * Math.PI/6
