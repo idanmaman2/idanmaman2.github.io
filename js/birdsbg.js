@@ -110,12 +110,7 @@ function animate() {
   requestAnimationFrame( animate );
   const interval = 1 / 60 ; 
   var delta = clock.getDelta();
-  deltaSum +=delta 
-  console.log(deltaSum)
-  if(deltaSum < interval)  // limit fps 
-    return ;
-  console.log("print")
-  deltaSum =0 ;
+
   var time = ptime / 100 ; 
   ptime++;
   renderer.clearDepth();
