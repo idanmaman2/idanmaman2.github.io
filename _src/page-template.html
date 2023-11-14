@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  @;{ The at-exp reader for a template treats this as a comment.
-  Also, notice the use template variables like @title,
-  @description etc. }
-  <meta charset="utf-8">
-  <script type="importmap">
+  <head>
+    @;{ The at-exp reader for a template treats this as a comment.
+        Also, notice the use template variables like @title,
+        @description etc. }
+    <meta charset="utf-8">
+    <script type="importmap">
       {
         "imports": {
           "three": "@|uri-prefix|/css/threejs/three.module.js" , 
@@ -15,78 +14,75 @@
         }
       }
     </script>
-  @(when (string-ci=? uri-path
-  (string-append uri-prefix
-  "/index.html"))
+    @(when (string-ci=? uri-path
+    (string-append uri-prefix
+                   "/index.html"))
 
-  @list{
-  <script type="module" src="@|uri-prefix|/js/birdsbg.js"></script>}
-  )
-  <title>@|title|</title>
-  <meta name="description" content="@|description|">
-  <meta name="author" content="@|author|">
-  <meta name="keywords" content="@|keywords|">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="@|uri-prefix|/favicon.ico">
-  <link rel="canonical" href="@|full-uri|">
-  @(when rel-next @list{
-  <link rel="next" href="@|rel-next|">})
-  @(when rel-prev @list{
-  <link rel="prev" href="@|rel-prev|">})
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/pygments.css">
-  <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/scribble.css">
-  <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/custom.css">
-  <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/all.min.css">
-  <link href="@|uri-prefix|/css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
-  <link href="@|uri-prefix|/css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
-  <link href="@|uri-prefix|/css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
-  <!-- Feeds -->
-  <link rel="alternate" type="application/atom+xml" href="@|atom-feed-uri|" title="Atom Feed">
-  <link rel="alternate" type="application/rss+xml" href="@|rss-feed-uri|" title="RSS Feed">
-  <!-- JS -->
-  @google-universal-analytics["UA-xxxxx"]
-</head>
+    @list{<script type="module" src="@|uri-prefix|/js/birdsbg.js"></script>}
+    )
+    <title>@|title|</title>
+    <meta name="description" content="@|description|">
+    <meta name="author"      content="@|author|">
+    <meta name="keywords"    content="@|keywords|">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="@|uri-prefix|/favicon.ico">
+    <link rel="canonical" href="@|full-uri|">
+    @(when rel-next @list{<link rel="next" href="@|rel-next|">})
+    @(when rel-prev @list{<link rel="prev" href="@|rel-prev|">})
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/all.min.css">
+    <link href="@|uri-prefix|/css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="@|uri-prefix|/css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+    <link href="@|uri-prefix|/css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="@|atom-feed-uri|" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="@|rss-feed-uri|" title="RSS Feed">
+    <!-- JS -->
+    @google-universal-analytics["UA-xxxxx"]
+  </head>
+  <body>
 
-<body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark" style="background:conic-gradient(#fd6666 0deg, #fd6666 72deg, #ffc556 72deg, #ffc556 144deg, #75fd71 144deg, #75fd71 216deg, #5d97fb 216deg , #5d97fb 288deg , #7dcaf9 288deg);">
+      <div class="container">
 
-  <!-- A standard Twitter Bootstrap nav bar -->
-  <nav class="navbar navbar-expand-md navbar-dark"
-    style="background:conic-gradient(#fd6666 0deg, #fd6666 72deg, #ffc556 72deg, #ffc556 144deg, #75fd71 144deg, #75fd71 216deg, #5d97fb 216deg , #5d97fb 288deg , #7dcaf9 288deg);">
-    <div class="container">
-
-      <a href="@|uri-prefix|/index.html" class="navbar-brand">
-        <img src="@|uri-prefix|/img/logo_clear.png" alt="logo" width="100" height="100">
-        <span class="gradient-text">IDHM's Blog</span>
-      </a>
+        <a href="@|uri-prefix|/index.html" class="navbar-brand"> 
+          <img src="@|uri-prefix|/img/logo_clear.png" alt="logo" width="100" height="100">
+          <span class="gradient-text">IDHM's Blog</span>
+        </a>
 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbar_collapse" aria-controls="navbar_collapse" aria-expanded="false"
-        aria-label="Toggle navigation">
+              data-target="#navbar_collapse" aria-controls="navbar_collapse"
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse " id="navbar_collapse">
-        <ul class="navbar-nav mr-auto">
-          @;{ We can define Racket functions to "DRY". Here's one to
-          emit HMTL for a nav item, adding class="active" iff
-          this page's @|uri-path| is the same as the nav link. }
+          <ul class="navbar-nav mr-auto">
+            @;{ We can define Racket functions to "DRY". Here's one to
+                emit HMTL for a nav item, adding class="active" iff
+                this page's @|uri-path| is the same as the nav link. }
 
-          @(define (ni uri label [a-attribs ""])
-          @list{
-          <li@(when (string-ci=? uri uri-path) " class=\" active\"")>
-            <a class="nav-link text-dark" href="@|uri|" @|a-attribs|>@|label|</a>
-            </li> })
+            @(define (ni uri label [a-attribs ""])
+              @list{
+                <li@(when (string-ci=? uri uri-path) " class=\"active\"")>
+                  <a class="nav-link text-dark" href="@|uri|"@|a-attribs|>@|label|</a>
+                </li> })
 
 
             @;{ Here we craft the dropdown links from a list of pairs.
-            The pairs are in the format '((name . url) ...) }
+                The pairs are in the format '((name . url) ...) }
 
             @(define (craft-tag-links listof-pairs)
-            @(map (lambda (pair)
-            @list{<a class="dropdown-item text-dark" href="@(cdr pair)">@(car pair)</a>})
-            listof-pairs))
+              @(map (lambda (pair)
+                @list{<a class="dropdown-item text-dark" href="@(cdr pair)">@(car pair)</a>})
+              listof-pairs))
 
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle text-dark" data-toggle="dropdown">
@@ -104,85 +100,80 @@
               <a class="nav-link text-dark" href="@|atom-feed-uri|">Atom</a>
             </li>
 
-
-        </ul>
+            
+          </ul>
       </div>
 
-    </div>
-  </nav>
-
-  <div>
-    <div style="position: relative;width: 100%; height: 100%">
-      <div style="position: fixed;width: 100%; height: 100%">
-        <canvas id="myCanvas" style="touch-action:none;width: 100%; height: 100%"></canvas>
       </div>
+    </nav>
 
-      <div class="container content_show"
-        style="margin-bottom:5vh;margin-top:5vh;position: absolute; top: 0; left: 0;width: 100%; height: 100%"
-        class="row">
-        @;{ Remember that Twitter Bootstrap has a 12 cell model. The
-        col-md-N classes should add up to 12. For instance 3
-        "col-md-4" divs, or 2 "col-md-6" divs. }
-        <!-- Main column -->
-        <div id="content" class="col-md-12">
-          @(when (string-ci=? uri-path
-          (string-append uri-prefix
-          "/index.html"))
-          @list{
-          <h1>SUPDAWG? </h1>
-          <p class="display-5 font-weight-light">Idan Maman's Personal Blog <i class="fa-solid fa-xl fa-kiwi-bird "></i>
-          </p> })
-          @;{ Index pages for posts have @tag that's not #f }
-          @(when tag
-          @list{<h1>Posts tagged <em>@|tag|</em></h1>})
-          @;{ The main page contents are in @contents }
-          @|contents|
-
+    <div >
+      <div style="position: relative;width: 100%; height: 100%">
+        <div  style="position: fixed;width: 100%; height: 100%">
+          <canvas id="myCanvas" style="width: 100%; height: 100%"></canvas>
         </div>
-        <footer>
-          <hr />
-          @(define (share-follow-button social_name link)
-          (let ([a "hello world"])
-          @list{
-          <a href="@|link|" target="blank" title="social @|social_name|"><i
-              class="fa-brands fa-bounce fa-xl  fa-@|social_name|"></i></a>
-
-          }))
-
-          @(define my_socials (hash
-          "github" "https://github.com/idanmaman2"
-          "twitter" "https://twitter.com/idanmaman451180"
-          "telegram" "https://t.me/IdanMaman"
-          ))
-
-          @(define (craft_my_socials)
-          @(hash-map
-          my_socials
-          (lambda (k v) (share-follow-button k v))
-          )
-          )
-          <p>@craft_my_socials[]</p>
-          <p>Site generated
+  
+        <div class="container content_show"  style="margin-bottom:5vh;margin-top:5vh;position: absolute; top: 0; left: 0;width: 100%; height: 100%" class="row">
+          @;{ Remember that Twitter Bootstrap has a 12 cell model. The
+              col-md-N classes should add up to 12.  For instance 3
+              "col-md-4" divs, or 2 "col-md-6" divs. }
+          <!-- Main column -->
+          <div id="content" class="col-md-12">
+            @(when (string-ci=? uri-path
+                                (string-append uri-prefix
+                                               "/index.html"))
+              @list{
+                <h1>SUPDAWG? </h1>
+                <p class="display-5 font-weight-light">Idan Maman's Personal Blog <i class="fa-solid fa-xl fa-kiwi-bird "></i></p> })
+            @;{ Index pages for posts have @tag that's not #f }
+            @(when tag
+              @list{<h1>Posts tagged <em>@|tag|</em></h1>})
+            @;{ The main page contents are in @contents }
+            @|contents|
+            
+          </div>
+          <footer >
+            <hr />
+           @(define (share-follow-button social_name link)
+            (let ([a "hello world"])
+              @list{
+                <a  href="@|link|" target="blank" title="social @|social_name|"><i class="fa-brands fa-bounce fa-xl  fa-@|social_name|"></i></a>
+               
+            }))
+    
+            @(define my_socials (hash 
+              "github" "https://github.com/idanmaman2"
+              "twitter" "https://twitter.com/idanmaman451180"
+              "telegram" "https://t.me/IdanMaman"
+            ))
+    
+            @(define (craft_my_socials)
+              @(hash-map 
+              my_socials
+              (lambda (k v) (share-follow-button k v))
+              )
+            )
+            <p >@craft_my_socials[]</p>
+            <p>Site generated
             by <a href="https://github.com/greghendershott/frog">Frog</a>,
             the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
-          <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
-          <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
-        </footer>
+            <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+            <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
+          </footer>
+        </div>
       </div>
+     
+      
+      
+ 
     </div>
-
-
-
-
-  </div>
-  <!-- </body> JS -->
-  <script type="text/javascript" src="@|uri-prefix|/js/jquery-3.2.1.slim.min.js"></script>
-  <script type="text/javascript" src="@|uri-prefix|/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function myFunction() {
-      console.log("IDK")
-    }
-  </script>
-</body>
-
+    <!-- </body> JS -->
+    <script type="text/javascript" src="@|uri-prefix|/js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="@|uri-prefix|/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function myFunction() {
+        console.log("IDK")
+      }
+      </script>
+  </body>
 </html>
