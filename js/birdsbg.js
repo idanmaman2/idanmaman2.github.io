@@ -105,13 +105,20 @@ function cantorDePairing(z){
 
 }
 var ptime = 0;
+var deltaSum = 0 ; 
 function animate() {
-  let convertToRad = (angle)=> (angle/180) * Math.PI/180
   requestAnimationFrame( animate );
-  renderer.clearDepth();
+  const interval = 1 / 60 ; 
   var delta = clock.getDelta();
+  deltaSum +=delta 
+  console.log(deltaSum)
+  if(deltaSum < interval)  // limit fps 
+    return ;
+  console.log("print")
+  deltaSum =0 ;
+  var time = ptime / 100 ; 
   ptime++;
-  var time = ptime / 100 ;
+  renderer.clearDepth();
   // so we will seperate it to 2 numbers using this formula : 
   if(time % 50 == 0 ){
     factor =  Math.random() ; 
@@ -126,8 +133,6 @@ function animate() {
     parrot.rotation.x =  Math.cos(angle1) * Math.PI/6
 
   }
-  
-
   renderer.render( scene, camera );
 
 }
