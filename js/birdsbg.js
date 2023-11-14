@@ -3,7 +3,7 @@ import { OrbitControls } from 'OrbitControls';
 import { GLTFLoader } from 'GLTFLoader';
 const myCanvas = document.querySelector('#myCanvas');
 const axes = new THREE.AxesHelper();
-renderer.autoClear = false;
+
 
 var clock = new THREE.Clock();
 var mixer ; 
@@ -45,7 +45,7 @@ const renderer = new THREE.WebGLRenderer({ canvas: myCanvas });
 renderer.setClearColor(0xffffff, 1.0); 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(myCanvas.offsetWidth, myCanvas.offsetHeight);
-
+renderer.autoClear = false;
 
 const loader = new GLTFLoader();
 
