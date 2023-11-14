@@ -1,9 +1,22 @@
-<article style="margin-bottom:3vh;">
+<article style="margin-bottom:5vh;">
   <header>
     <h2><a href='@|uri-path|'>@|title|</a></h2>
-    <p class='topics'>@|tags|</p>
-    <p class='date-and-tags'>@|date|</p>
-    <p class='authors'>By: @|authors|</p>
+    <table >
+      <tbody>
+        <tr>
+          <th scope="row">Tags</th>
+          <td class="topics">@|tags|</td>
+        </tr>
+        <tr>
+          <th scope="row">Date&nbsp;</th>
+          <td class="date-and-tags">@|date|</td>
+        </tr>
+        <tr>
+          <th scope="row">By</th>
+          <td class="authors">@|authors|</td>
+        </tr>
+      </tbody>
+    </table>
   </header>
   @(when more?
     @list{<footer>
