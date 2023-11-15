@@ -72,10 +72,10 @@
           @;{ We can define Racket functions to "DRY". Here's one to
           emit HMTL for a nav item, adding class="active" iff
           this page's @|uri-path| is the same as the nav link. }
-
           @(define (ni uri label [a-attribs ""])
           @list{
-          <li@(when (string-ci=? uri uri-path) " class=\" active\"")>
+          <li
+          @(when (string-ci=? uri uri-path) " class=\" active\"")>
             <a class="nav-link text-dark" href="@|uri|" @|a-attribs|>@|label|</a>
             </li> })
 
@@ -131,7 +131,7 @@
           @list{
           <div class="mb-5">
             <h1 class="display-5">SUPDAWG? </h1>
-            <p class="h2 font-weight-light">Idan Maman's Personal Blog <i class="fa-solid fa-xl fa-kiwi-bird "></i>
+            <p class="h5 mt-2 font-weight-light">Idan Maman's Personal Blog <i class="fa-solid fa-xl fa-kiwi-bird "></i>
             </p>
           </div>
           })
@@ -166,7 +166,7 @@
           <p>Site generated
             by <a href="https://github.com/greghendershott/frog">Frog</a>,
             the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
-          <p>Using <a href="https://getbootstrap.com/docs/5.2/content/typography/">Bootstrap 5.3.2</a>.</p>
+          <p>Using <a href="https://getbootstrap.com/docs/5.2/content/typography/">Bootstrap 5.3</a>.</p>
           <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
         </footer>
       </div>
