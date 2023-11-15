@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <script type="importmap">
       {
@@ -32,139 +31,114 @@
   <link href="/css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
   <link href="/css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
   <link href="/css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
-  <!-- Feeds -->
-  <link rel="alternate" type="application/atom+xml" href="/feeds/M2.atom.xml" title="Atom Feed">
-  <link rel="alternate" type="application/rss+xml" href="/feeds/M2.rss.xml" title="RSS Feed">
-  <!-- JS -->
-  <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-xxxxx', 'auto');
-    ga('send', 'pageview');
-  </script>
 </head>
 
 <body>
 
-  <!-- A standard Twitter Bootstrap nav bar -->
-  <nav class="navbar navbar-expand-md navbar-dark"
-    style="background:conic-gradient(#fd6666 0deg, #fd6666 72deg, #ffc556 72deg, #ffc556 144deg, #75fd71 144deg, #75fd71 216deg, #5d97fb 216deg , #5d97fb 288deg , #7dcaf9 288deg);">
-    <div class="container">
 
-      <a href="/index.html" class="navbar-brand">
-        <img src="/img/logo_clear.png" alt="logo" width="100" height="100">
-        <span class="gradient-text">IDHM's Blog</span>
-      </a>
-
-      <button class="navbar-toggler navbar-toggler-right"  data-bs-toggle="collapse"
-      href="#navbar_collapse" aria-controls="navbar_collapse" role="button" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse " id="navbar_collapse">
-        <ul class="navbar-nav mr-auto">
-
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" >
-                Tags <b class="caret"></b>
-              </a>
-
-              <div class="dropdown-menu">
-                <a class="dropdown-item text-dark" href="/tags/Blog.html">Blog</a><a class="dropdown-item text-dark" href="/tags/Frog.html">Frog</a><a class="dropdown-item text-dark" href="/tags/M1.html">M1</a><a class="dropdown-item text-dark" href="/tags/M2.html">M2</a><a class="dropdown-item text-dark" href="/tags/MD.html">MD</a><a class="dropdown-item text-dark" href="/tags/Pwning.html">Pwning</a><a class="dropdown-item text-dark" href="/tags/Racket.html">Racket</a><a class="dropdown-item text-dark" href="/tags/Reversing.html">Reversing</a><a class="dropdown-item text-dark" href="/tags/Scribble.html">Scribble</a>
-              </div>
-            </li>
-
-            <li
-            >
-              <a class="nav-link text-dark" href="/About.html" >About</a>
-              </li> 
-
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="/feeds/M2.atom.xml">Atom</a>
-            </li>
-
-
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-
-  <div>
-    <div style="position: relative;width: 100%; height: 100%">
+  <div style="position: relative;width: 100%; height: 100%">
+    <div>
       <div style="position: fixed;width: 100%; height: 100%">
         <canvas id="myCanvas" style="touch-action:none;width: 100%; height: 100%"></canvas>
       </div>
-
-      <div class="container content_show"
-        style="margin-bottom:5vh;margin-top:5vh;position: absolute; top: 0; left: 0;width: 100%; height: 100%"
-        class="row">
-
-        <!-- Main column -->
-        <div id="content" class="col-md-12">
+      <div class="position: absolute; top: 0; left: 0;width: 100%; height: 100%">
 
 
-          <h1>Posts tagged <em>M2</em></h1>
+        <!-- A standard Twitter Bootstrap nav bar -->
+        <nav class="navbar navbar-expand-md navbar-dark"
+          style="background:conic-gradient(#fd6666 0deg, #fd6666 72deg, #ffc556 72deg, #ffc556 144deg, #75fd71 144deg, #75fd71 216deg, #5d97fb 216deg , #5d97fb 288deg , #7dcaf9 288deg);">
+          <div class="container">
 
-          <article style="margin-bottom:5vh;">
+            <a href="/index.html" class="navbar-brand">
+              <img src="/img/logo_clear.png" alt="logo" width="100" height="100">
+              <span class="gradient-text">IDHM's Blog</span>
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" data-bs-toggle="collapse" href="#navbar_collapse"
+              aria-controls="navbar_collapse" role="button" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbar_collapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">
+                    Tags <b class="caret"></b>
+                  </a>
+
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item text-dark" href="/tags/Blog.html">Blog</a><a class="dropdown-item text-dark" href="/tags/Frog.html">Frog</a><a class="dropdown-item text-dark" href="/tags/M1.html">M1</a><a class="dropdown-item text-dark" href="/tags/M2.html">M2</a><a class="dropdown-item text-dark" href="/tags/MD.html">MD</a><a class="dropdown-item text-dark" href="/tags/Pwning.html">Pwning</a><a class="dropdown-item text-dark" href="/tags/Racket.html">Racket</a><a class="dropdown-item text-dark" href="/tags/Reversing.html">Reversing</a><a class="dropdown-item text-dark" href="/tags/Scribble.html">Scribble</a>
+                  </div>
+                </li>
+
+                <li >
+                  <a class="nav-link text-dark" href="/About.html" >About</a>
+                </li> 
+
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+        <div>
+
+
+          <div class="container" style="margin-bottom:5vh;margin-top:5vh;" class="row">
+            <!-- Main column -->
+            <div id="content" class="col-md-12">
+
+              <h1>Posts tagged <em>M2</em></h1>
+
+              <article class="card text-center border-primary  bg-warning rounded-3  bg-opacity-25" style="margin-bottom:5vh;">
   <header>
-    <h2><a class="non_link_text" href='/2023/11/my-setup-for-apple-m1-2.html'>My setup for apple M1/2</a></h2>
-    <table >
+    <h2 class="card-header  border-primary"><a class="non_link_text" href='/2023/11/my-setup-for-apple-m1-2.html'>My setup for apple M1/2</a></h2>
+    <table class="card-body  border-primary" style=" margin-left: auto;margin-right: auto;">
       <tbody>
         <tr>
-          <th scope="row">Tags</th>
           <td class="topics"><span class="tags"><a href="/tags/M1.html">M1</a>, <a href="/tags/M2.html">M2</a>, <a href="/tags/Pwning.html">Pwning</a>, <a href="/tags/Reversing.html">Reversing</a></span></td>
         </tr>
         <tr>
-          <th scope="row">Date&nbsp;</th>
           <td class="date-and-tags">
 <time datetime="2023-11-14" pubdate="true">2023-11-14</time></td>
         </tr>
         <tr>
-          <th scope="row">By</th>
           <td class="authors"><span class="authors">Idan Maman</span></td>
         </tr>
       </tbody>
     </table>
   </header>
+
   <footer>
 
-    <button role="button" class="btn btn-warning" ><a class="non_link_text" href='/2023/11/my-setup-for-apple-m1-2.html' >read this article</a></button>
+    <button type="button" class="border-primary btn btn-outline-primary mb-3 mt-3" ><a class="non_link_text" href='/2023/11/my-setup-for-apple-m1-2.html' >read this article</a></button>
   </footer>
 </article>
-        <footer>
-          <hr />
-          <p><a href="https://t.me/IdanMaman" target="blank" title="social telegram"><i
-                 class="fa-brands fa-bounce fa-xl  fa-telegram"></i></a>
-             <a href="https://github.com/idanmaman2" target="blank" title="social github"><i
-                 class="fa-brands fa-bounce fa-xl  fa-github"></i></a>
-             <a href="https://twitter.com/idanmaman451180" target="blank" title="social twitter"><i
-                 class="fa-brands fa-bounce fa-xl  fa-twitter"></i></a>
-          </p>
-          <p>Site generated
-            by <a href="https://github.com/greghendershott/frog">Frog</a>,
-            the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
-          <p>Using <a href="https://getbootstrap.com/docs/5.2/content/typography/">Bootstrap 5.3</a>.</p>
-          <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
-        </footer>
+              <footer>
+                <hr />
+                <p><a href="https://t.me/IdanMaman" target="blank" title="social telegram"><i
+                       class="fa-brands fa-bounce fa-xl  fa-telegram"></i></a>
+                   <a href="https://github.com/idanmaman2" target="blank" title="social github"><i
+                       class="fa-brands fa-bounce fa-xl  fa-github"></i></a>
+                   <a href="https://twitter.com/idanmaman451180" target="blank" title="social twitter"><i
+                       class="fa-brands fa-bounce fa-xl  fa-twitter"></i></a>
+                </p>
+                <p>Site generated
+                  by <a class="link-warning" href="https://github.com/greghendershott/frog">Frog</a>,
+                  the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+                <p>Using <a class="link-warning" href="https://getbootstrap.com/docs/5.2/content/typography/">Bootstrap
+                    5.3</a>.</p>
+                <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
+              </footer>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-
-
-
-  </div>
-  <!-- </body> JS -->
-  <script type="text/javascript" src="css/bootstrap-5.3.2-dist 2/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function myFunction() {
-      console.log("IDK")
-    }
-  </script>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="css/bootstrap-5.3.2-dist 2/js/bootstrap.bundle.min.js"></script>
+    <script>
+    </script>
 </body>
 
 </html>

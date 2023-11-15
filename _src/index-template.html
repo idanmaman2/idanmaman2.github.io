@@ -1,26 +1,24 @@
-<article style="margin-bottom:5vh;">
+<article class="card text-center border-primary  bg-warning rounded-3  bg-opacity-25" style="margin-bottom:5vh;">
   <header>
-    <h2><a class="non_link_text" href='@|uri-path|'>@|title|</a></h2>
-    <table >
+    <h2 class="card-header  border-primary"><a class="non_link_text" href='@|uri-path|'>@|title|</a></h2>
+    <table class="card-body  border-primary" style=" margin-left: auto;margin-right: auto;">
       <tbody>
         <tr>
-          <th scope="row">Tags</th>
           <td class="topics">@|tags|</td>
         </tr>
         <tr>
-          <th scope="row">Date&nbsp;</th>
           <td class="date-and-tags">@|date|</td>
         </tr>
         <tr>
-          <th scope="row">By</th>
           <td class="authors">@|authors|</td>
         </tr>
       </tbody>
     </table>
   </header>
+  
   @(when more?
     @list{<footer>
       
-            <button role="button" class="btn btn-warning" ><a class="non_link_text" href='@|uri-path|' >read this article</a></button>
+            <button type="button" class="border-primary btn btn-outline-primary mb-3 mt-3" ><a class="non_link_text" href='@|uri-path|' >read this article</a></button>
           </footer>})
 </article>
