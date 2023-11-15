@@ -10,6 +10,7 @@ var mixer ;
 var parrot ; 
 var sx,sy,sz ; 
 var factor = 1 ; 
+var speed = 150 ; 
 var radius = 100 ; 
 var shift_x = 20  ; 
 var shift_y = -20  ; 
@@ -111,8 +112,7 @@ function animate() {
   requestAnimationFrame( animate );
   const interval = 1 / 60 ; 
   var delta = clock.getDelta();
-
-  var time = ptime / 100 ; 
+  var time = ptime / speed ; 
   ptime++;
   renderer.clearDepth();
   // so we will seperate it to 2 numbers using this formula : 
