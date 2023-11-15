@@ -11,11 +11,12 @@ var parrot ;
 var sx,sy,sz ; 
 var factor = 1 ; 
 var radius = 100 ; 
-var shift_x = 0 ; 
-var shift_y =0 ; 
+var shift_x = 20  ; 
+var shift_y = -20  ; 
 if(window.matchMedia("(max-width: 600px)").matches) {
   radius = 50 ; 
   shift_x = 20 ; 
+  shift_y = 0 ; 
 }
 
 const scene = new THREE.Scene();
