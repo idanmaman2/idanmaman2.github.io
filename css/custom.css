@@ -54,4 +54,7 @@ article img {
     }
 }
 
+.non_link_text{
+    text-decoration: none;
+}
 

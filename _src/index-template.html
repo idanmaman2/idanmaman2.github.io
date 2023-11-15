@@ -1,6 +1,6 @@
 <article style="margin-bottom:5vh;">
   <header>
-    <h2><a href='@|uri-path|'>@|title|</a></h2>
+    <h2><a class="non_link_text" href='@|uri-path|'>@|title|</a></h2>
     <table >
       <tbody>
         <tr>
@@ -21,6 +21,6 @@
   @(when more?
     @list{<footer>
       
-            <button type="button" class="btn btn-warning" ><a href='@|uri-path|' >read this article</a></button>
+            <button role="button" class="btn btn-warning" ><a class="non_link_text" href='@|uri-path|' >read this article</a></button>
           </footer>})
 </article>

@@ -34,7 +34,7 @@
   @(when rel-prev @list{
   <link rel="prev" href="@|rel-prev|">})
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/bootstrap-5.3.2-dist 2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/scribble.css">
   <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/custom.css">
@@ -61,8 +61,8 @@
         <span class="gradient-text">IDHM's Blog</span>
       </a>
 
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbar_collapse" aria-controls="navbar_collapse" aria-expanded="false"
+      <button class="navbar-toggler navbar-toggler-right"  data-bs-toggle="collapse" 
+      href="#navbar_collapse" aria-controls="navbar_collapse" role="button" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -89,7 +89,7 @@
             listof-pairs))
 
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle text-dark" data-toggle="dropdown">
+              <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" >
                 Tags <b class="caret"></b>
               </a>
 
@@ -129,9 +129,12 @@
           (string-append uri-prefix
           "/index.html"))
           @list{
-          <h1>SUPDAWG? </h1>
-          <p class="display-5 font-weight-light">Idan Maman's Personal Blog <i class="fa-solid fa-xl fa-kiwi-bird "></i>
-          </p> })
+          <div class="mb-5">
+            <h1 class="display-5">SUPDAWG? </h1>
+            <p class="h2 font-weight-light">Idan Maman's Personal Blog <i class="fa-solid fa-xl fa-kiwi-bird "></i>
+            </p>
+          </div>
+          })
           @;{ Index pages for posts have @tag that's not #f }
           @(when tag
           @list{<h1>Posts tagged <em>@|tag|</em></h1>})
@@ -163,7 +166,7 @@
           <p>Site generated
             by <a href="https://github.com/greghendershott/frog">Frog</a>,
             the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
-          <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+          <p>Using <a href="https://getbootstrap.com/docs/5.2/content/typography/">Bootstrap 5.3.2</a>.</p>
           <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
         </footer>
       </div>
@@ -174,8 +177,7 @@
 
   </div>
   <!-- </body> JS -->
-  <script type="text/javascript" src="@|uri-prefix|/js/jquery-3.2.1.slim.min.js"></script>
-  <script type="text/javascript" src="@|uri-prefix|/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="@|uri-prefix|css/bootstrap-5.3.2-dist 2/js/bootstrap.bundle.min.js"></script>
   <script>
     function myFunction() {
       console.log("IDK")
