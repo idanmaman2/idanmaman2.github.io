@@ -140,6 +140,12 @@
 
                 }))
 
+                @(define (techs_link tech_name link)
+                (let ([a "hello world"])
+                @list{
+                  <li class="ms-5"><i class="fa-solid fa-copyright"></i>  <a class="link-warning" href="@|link|"> @|tech_name| </a> </li>
+                }))
+
                 @(define my_socials (hash
                 "github" "https://github.com/idanmaman2"
                 "twitter" "https://twitter.com/idanmaman451180"
@@ -147,18 +153,39 @@
                 "linkedin" "https://www.linkedin.com/in/idan-maman-bb4b771bb"
                 ))
 
+                @(define techs (hash
+                "gsap" "https://gsap.com/"
+                "three.js" "https://threejs.org/"
+                "Bootstrap 5.3.2" "https://getbootstrap.com/" 
+                "FontAwesome" "https://fontawesome.com/"
+                "pygments" "https://pygments.org/"
+                "lunrjs" "https://lunrjs.com/"
+                ))
+
+
+
                 @(define (craft_my_socials)
                 @(hash-map
                 my_socials
                 (lambda (k v) (share-follow-button k v))
                 )
                 )
+
+                @(define (craft_my_techs)
+                  @(hash-map
+                  techs
+                  (lambda (k v) (techs_link k v))
+                  )
+                ) 
+                
+
+
+
                 <p>@craft_my_socials[]</p>
                 <p>Site generated
                   by <a class="link-warning" href="https://github.com/greghendershott/frog">Frog</a>,
                   the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
-                <p>Using <a class="link-warning" href="https://getbootstrap.com/docs/5.2/content/typography/">Bootstrap
-                    5.3</a>.</p>
+                <p>Using <ul  class="list-unstyled">@craft_my_techs[]</ul></p>
                 <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
               </footer>
             </div>
