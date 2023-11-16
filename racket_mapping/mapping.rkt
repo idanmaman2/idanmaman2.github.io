@@ -7,26 +7,15 @@
 ; after that I will write the data to huge json file .
 ; and then I will send that json file to js that will lunar js will search inside for data .
 
-(define content_tags
-    (list 
-        "h1"
-        "h2"
-        "h3"
-        "h4"
-        "h5"
-        "h6"
-        "div"
-        "p"
-        "a"
-        "p"
-        "span"
-    )
-)
-(define black_list (list 
-    "footer"
-    "nav"
-))
+(define content_tags (list "h1" "h2" "h3" "h4" "h5" "h6" "div" "p" "a" "p" "span"))
+(define black_list (list "footer" "nav"))
 
+(define (analyze_html html)
+  (define (analyze_html_rec html)
+    (void)
+  )
+  (void)
+) 
 
 
 (define (read-file-lines in)
@@ -42,21 +31,11 @@
     (string-join (take-right splitted (- (length splitted) 1)) "/")))
 
 
-(define (analyze_html xexp_syntax)
-
-
-)
-
-(define (to_json )
-
-
-)
-
-
-
 (define sitemap (open-input-file "./sitemap.txt"))
 (define test (open-output-file "idk.txt"))
 (for ([i (map parse_usrl_endpoint (read-file-lines sitemap))])
-  (displayln i)
-  (write (html->xexp (string-join (read-file-lines (open-input-file i)) "\n")) 
-  test) )
+  (displayln i test)
+  (displayln "" test)
+    (displayln "" test)
+      (displayln "" test)
+  (write	 (html->xexp (string-join (read-file-lines (open-input-file i)) "\n")) test))

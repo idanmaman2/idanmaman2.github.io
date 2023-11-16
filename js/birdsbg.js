@@ -90,6 +90,10 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight)
 }
 
+document.addEventListener("scroll", (event) => {
+  animate()
+});
+
 
 function animate() {
   requestAnimationFrame( animate );

@@ -23,7 +23,7 @@
   (string-append uri-prefix
   "/About.html"))
 
-  (string-prefix? 
+  (string-prefix?
   uri-path
   (string-append uri-prefix
   "/tags/")
@@ -61,7 +61,7 @@
 
   <div style="position: relative;width: 100%; height: 100%">
     <div>
-  
+
 
       <div style="z-index: 2;position: absolute; top: 0; left: 0;width: 100%; height: 100%">
 
@@ -99,6 +99,7 @@
                   </a>
 
                   <div class="dropdown-menu">
+                    <a class="dropdown-item text-dark" href="/">all</a>
                     @craft-tag-links[(all-tag-pairs)]
                   </div>
                 </li>
@@ -122,7 +123,8 @@
               @list{
               <div class="mb-5 alert alert-primary bg-primary bg-opacity-25 text-center" role="alert">
                 <h1 class="alert-heading display-5">SUPDAWG? </h1>
-                <p class="h5 mt-2 font-weight-light"> Idan Maman's Personal Blog <i class="fa-solid fa-xl fa-kiwi-bird "></i>
+                <p class="h5 mt-2 font-weight-light"> Idan Maman's Personal Blog <i
+                    class="fa-solid fa-xl fa-kiwi-bird "></i>
                 </p>
               </div>
               })
@@ -143,20 +145,21 @@
                 @(define (techs_link tech_name link)
                 (let ([a "hello world"])
                 @list{
-                  <li class="ms-5"><i class="fa-solid fa-copyright"></i>  <a class="link-warning" href="@|link|"> @|tech_name| </a> </li>
+                <li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="@|link|">
+                    @|tech_name| </a> </li>
                 }))
 
                 @(define my_socials (hash
                 "github" "https://github.com/idanmaman2"
                 "twitter" "https://twitter.com/idanmaman451180"
-                "telegram" "https://t.me/IdanMaman" 
+                "telegram" "https://t.me/IdanMaman"
                 "linkedin" "https://www.linkedin.com/in/idan-maman-bb4b771bb"
                 ))
 
                 @(define techs (hash
                 "gsap" "https://gsap.com/"
                 "three.js" "https://threejs.org/"
-                "Bootstrap 5.3.2" "https://getbootstrap.com/" 
+                "Bootstrap 5.3.2" "https://getbootstrap.com/"
                 "FontAwesome" "https://fontawesome.com/"
                 "pygments" "https://pygments.org/"
                 "lunrjs" "https://lunrjs.com/"
@@ -172,20 +175,19 @@
                 )
 
                 @(define (craft_my_techs)
-                  @(hash-map
-                  techs
-                  (lambda (k v) (techs_link k v))
-                  )
-                ) 
-                
-
-
+                @(hash-map
+                techs
+                (lambda (k v) (techs_link k v))
+                )
+                )
 
                 <p>@craft_my_socials[]</p>
                 <p>Site generated
                   by <a class="link-warning" href="https://github.com/greghendershott/frog">Frog</a>,
                   the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
-                <p>Using <ul  class="list-unstyled">@craft_my_techs[]</ul></p>
+                <p>Using
+                <ul class="list-unstyled">@craft_my_techs[]</ul>
+                </p>
                 <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
               </footer>
             </div>
@@ -195,7 +197,7 @@
       <div style="z-index: 1;position: fixed;width: 100%; height: 100%">
         <canvas id="myCanvas" style="touch-action:none;width: 100%; height: 100%"></canvas>
       </div>
-    
+
     </div>
     <!-- </body> JS -->
     <script type="text/javascript" src="@|uri-prefix|/css/bootstrap_5_3_2/js/bootstrap.bundle.min.js"></script>
