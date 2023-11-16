@@ -44,22 +44,17 @@
 
 
         <!-- A standard Twitter Bootstrap nav bar -->
-        <nav class="navbar navbar-expand-md navbar-dark"
-          style="background:conic-gradient(#fd6666 0deg, #fd6666 72deg, #ffc556 72deg, #ffc556 144deg, #75fd71 144deg, #75fd71 216deg, #5d97fb 216deg , #5d97fb 288deg , #7dcaf9 288deg);">
-          <div class="container">
-
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background:conic-gradient(#fd6666 0deg, #fd6666 72deg, #ffc556 72deg, #ffc556 144deg, #75fd71 144deg, #75fd71 216deg, #5d97fb 216deg , #5d97fb 288deg , #7dcaf9 288deg);">
+          <div class="container-fluid">
             <a href="/index.html" class="navbar-brand">
               <img src="/img/logo_clear.png" alt="logo" width="100" height="100">
               <span class="gradient-text">IDHM's Blog</span>
             </a>
-
-            <button class="navbar-toggler navbar-toggler-right" data-bs-toggle="collapse" href="#navbar_collapse"
-              aria-controls="navbar_collapse" role="button" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse " id="navbar_collapse">
-              <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">
                     Tags <b class="caret"></b>
@@ -70,14 +65,24 @@
                     <a class="dropdown-item text-dark" href="/tags/Blog.html">Blog</a><a class="dropdown-item text-dark" href="/tags/Frog.html">Frog</a><a class="dropdown-item text-dark" href="/tags/M1.html">M1</a><a class="dropdown-item text-dark" href="/tags/M2.html">M2</a><a class="dropdown-item text-dark" href="/tags/MD.html">MD</a><a class="dropdown-item text-dark" href="/tags/Pwning.html">Pwning</a><a class="dropdown-item text-dark" href="/tags/Racket.html">Racket</a><a class="dropdown-item text-dark" href="/tags/Reversing.html">Reversing</a><a class="dropdown-item text-dark" href="/tags/Scribble.html">Scribble</a>
                   </div>
                 </li>
-
                 <li  class=" active">
                   <a class="nav-link text-dark" href="/About.html" >About</a>
                 </li> 
-
               </ul>
-            </div>
 
+
+              <li class="dropdown nav-link ">
+                <input id="demo" onkeyup="doSearch()" class="dropdown-toggle form-control"
+                onfocus="showDropdown()" onblur="hideDropdown()"
+                data-bs-toggle="dropdown" type="search" placeholder="Search" aria-label="Search">
+
+                <ul tabindex="-1" style="width:100%;" class="dropdown-menu bg-transparent list-group border-0" id="results"></ul>
+
+              </li>
+
+
+
+            </div>
           </div>
         </nav>
         <div>
@@ -136,13 +141,13 @@ thanks to Racket , scribble and Frog for allowing me to create this cool blog .
                   by <a class="link-warning" href="https://github.com/greghendershott/frog">Frog</a>,
                   the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
                 <p>Using
-                <ul class="list-unstyled"><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://lunrjs.com/">
-                                              lunrjs </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://getbootstrap.com/">
-                                                                   Bootstrap 5.3.2 </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://threejs.org/">
-                                                                                                 three.js </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://fontawesome.com/">
-                                                                                                                        FontAwesome </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://gsap.com/">
-                                                                                                                                                  gsap </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://pygments.org/">
-                                                                                                                                                                     pygments </a> </li></ul>
+                <ul class="list-unstyled"><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://endler.dev/2019/tinysearch">
+                                              tinysearch </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://pygments.org/">
+                                                                       pygments </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://getbootstrap.com/">
+                                                                                              Bootstrap 5.3.2 </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://threejs.org/">
+                                                                                                                            three.js </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://fontawesome.com/">
+                                                                                                                                                   FontAwesome </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://gsap.com/">
+                                                                                                                                                                             gsap </a> </li></ul>
                 </p>
                 <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
               </footer>
@@ -157,6 +162,18 @@ thanks to Racket , scribble and Frog for allowing me to create this cool blog .
     </div>
     <!-- </body> JS -->
     <script type="text/javascript" src="/css/bootstrap_5_3_2/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/js/search_engine.js"></script>
+    <script type="module">
+      import { search, default as init } from '/wasm_output/tinysearch_engine.js';
+      window.search = search;
+      async function run() {
+        await init('/wasm_output/tinysearch_engine_bg.wasm');
+      }
+
+      run();
+    </script>
+
+
     <script>
     </script>
 </body>

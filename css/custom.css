@@ -70,3 +70,17 @@ body {
 body::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
+.read_next:hover {
+    background-color: #fff;
+color: #ffacb7;
+}
+.blogs_dir a{    
+    background-color: rgba(255, 255, 0, .25); 
+}
+.pagination{
+    width:100%!important;
+    display: flex!important;
+    justify-content: center!important; 
+    align-items: center!important;
+}
+

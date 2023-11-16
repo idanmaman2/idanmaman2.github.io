@@ -8,3 +8,8 @@ So in this Post I will show How I setted up my blog .
 
 <!-- more -->
 
+@centered{
+    @bold{
+        I Am the real king
+    }
+}

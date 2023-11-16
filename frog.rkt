@@ -4,7 +4,11 @@
   (-> any)
   (current-scheme/host "https://idanmaman2.github.io")
   (current-title "IDHM.Blog")
-  (current-author "Idan Maman"))
+  (current-author "Idan Maman")
+  (current-posts-per-page 4)
+ )
+
+
 
 ;; Called once per post and non-post page, on the contents.
 (define/contract (enhance-body xs)
