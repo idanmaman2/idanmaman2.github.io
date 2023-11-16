@@ -17,6 +17,14 @@ if(window.matchMedia("(max-width: 600px)").matches) {
   shift_y = 0 ; 
 }
 
+if(myCanvas.width != myCanvas.clientWidth || myCanvas.height != myCanvas.clientHeight){
+  //Resize
+  myCanvas.width = myCanvas.clientWidth;
+  myCanvas.height = myCanvas.clientHeight;
+}
+
+
+
 const scene = new THREE.Scene();
 
 var parrot ; 
