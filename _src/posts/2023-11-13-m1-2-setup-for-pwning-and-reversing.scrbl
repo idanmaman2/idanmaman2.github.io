@@ -66,11 +66,15 @@ so with warp you have AI chat  , tmux like windows spliting , warp supporting ss
 so it is pretty cool and have a realy nice gui and text complete so try it ! 
 @section[#:style 'unnumbered]{Docker}
 so I can't say much - it works pretty nice , you can emualte x86 containers or use arm 
-it is not uses the native kernel it is Virtualalized but it still works great . 
+it doesn't use the native kernel it is Virtualalized but it still works great . 
 @section[#:style 'unnumbered]{Reversing tools}
 so that is going to be a long section : 
-@subsection[#:style 'unnumbered]{PE edit tools}
 
+@subsection[#:style 'unnumbered]{PE edit tools}
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.58.43.png"]
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.54.52.png"]
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.56.17.png"]
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 3.09.36.png"]
 
 @section[#:style 'unnumbered]{Developing}
 @section[#:style 'unnumbered]{Etc}

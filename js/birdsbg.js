@@ -7,7 +7,7 @@ var mixer ;
 var parrot ; 
 var sx,sy,sz ; 
 var factor = 1 ; 
-var speed = 150 ; 
+var speed = 3000 ; 
 var radius = 100 ; 
 var shift_x = 20  ; 
 var shift_y = -20  ; 
@@ -91,26 +91,11 @@ function onWindowResize() {
 }
 
 
-function cantorPairing(k1 , k2 ){
-  return (k1 + k2)(k1 + k2 + 1)/2 + k2;
-
-}
-function cantorDePairing(z){
-  var n =Math.floor((-1 + Math.sqrt(1 + 8 * z ))/2) 
-  var Tn = (n * (n+1)) /2 
-  var y =  z - Tn   
-  var x = n  - y
-  return [x,y]
-
-}
-var ptime = 0;
-var deltaSum = 0 ; 
 function animate() {
   requestAnimationFrame( animate );
   const interval = 1 / 60 ; 
   var delta = clock.getDelta();
-  var time = ptime / speed ; 
-  ptime++;
+  var time = Date.now() / speed ; 
   renderer.clearDepth();
   // so we will seperate it to 2 numbers using this formula : 
   if(time % 50 == 0 ){
