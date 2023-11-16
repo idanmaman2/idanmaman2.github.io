@@ -12,4 +12,6 @@ So in this Post I will show How I setted up my blog .
     @bold{
         I Am the real king
     }
+    vad is a realy cool tree
 }
+
