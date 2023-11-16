@@ -2,7 +2,7 @@
 
 (define/contract (init)
   (-> any)
-  (current-scheme/host "http://www.githu.com")
+  (current-scheme/host "https://idanmaman2.github.io")
   (current-title "IDHM.Blog")
   (current-author "Idan Maman"))
 

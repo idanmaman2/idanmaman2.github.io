@@ -63,8 +63,10 @@ body {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll; 
+    -webkit-overflow-scrolling: touch;
+    height:100%;
   }
   
-  body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
-  }
+}

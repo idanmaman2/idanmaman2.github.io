@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">IDHM.Blog: Posts tagged 'Reversing'</title>
- <link rel="self" href="http://www.githu.com/feeds/Reversing.atom.xml" />
- <link href="http://www.githu.com/tags/Reversing.html" />
- <id>urn:http-www-githu-com:-tags-Reversing-html</id>
+ <link rel="self" href="https://idanmaman2.github.io/feeds/Reversing.atom.xml" />
+ <link href="https://idanmaman2.github.io/tags/Reversing.html" />
+ <id>urn:https-idanmaman2-github-io:-tags-Reversing-html</id>
  <updated>2023-11-14T14:58:33Z</updated>
  <entry>
   <title type="text">My setup for apple M1/2</title>
-  <link rel="alternate" href="http://www.githu.com/2023/11/my-setup-for-apple-m1-2.html?utm_source=Reversing&amp;utm_medium=Atom" />
-  <id>urn:http-www-githu-com:-2023-11-my-setup-for-apple-m1-2-html</id>
+  <link rel="alternate" href="https://idanmaman2.github.io/2023/11/my-setup-for-apple-m1-2.html?utm_source=Reversing&amp;utm_medium=Atom" />
+  <id>urn:https-idanmaman2-github-io:-2023-11-my-setup-for-apple-m1-2-html</id>
   <published>2023-11-14T14:58:33Z</published>
   <updated>2023-11-14T14:58:33Z</updated>
   <author>
@@ -78,4 +78,4 @@ that will include :
      &lt;p&gt;&lt;span class="hspace"&gt;&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;
    &lt;tr&gt;
     &lt;td&gt;
-     &lt;p&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a class="toptoclink" data-pltdoc="x" href="#%28part._.Etc%29"&gt;Etc&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;a href="http://www.githu.com/2023/11/my-setup-for-apple-m1-2.html?utm_source=Reversing&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
+     &lt;p&gt;&lt;span class="hspace"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;a class="toptoclink" data-pltdoc="x" href="#%28part._.Etc%29"&gt;Etc&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;a href="https://idanmaman2.github.io/2023/11/my-setup-for-apple-m1-2.html?utm_source=Reversing&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

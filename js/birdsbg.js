@@ -2,9 +2,6 @@ import * as THREE from 'three';
 import { OrbitControls } from 'OrbitControls';
 import { GLTFLoader } from 'GLTFLoader';
 const myCanvas = document.querySelector('#myCanvas');
-
-
-
 var clock = new THREE.Clock();
 var mixer ; 
 var parrot ; 

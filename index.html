@@ -19,15 +19,14 @@
   <meta name="keywords" content="Frog, Pwning, Racket, M2, Blog, all, M1, Reversing, MD, Scribble">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.ico">
-  <link rel="canonical" href="http://www.githu.com/index.html">
+  <link rel="canonical" href="https://idanmaman2.github.io/index.html">
 
 
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap-5.3.2-dist 2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap_5_3_2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/pygments.css">
   <link rel="stylesheet" type="text/css" href="/css/scribble.css">
   <link rel="stylesheet" type="text/css" href="/css/custom.css">
-  <link rel="stylesheet" type="text/css" href="/css/all.min.css">
   <link href="/css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
   <link href="/css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
   <link href="/css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
@@ -39,10 +38,9 @@
 
   <div style="position: relative;width: 100%; height: 100%">
     <div>
-      <div style="position: fixed;width: 100%; height: 100%">
-        <canvas id="myCanvas" style="touch-action:none;width: 100%; height: 100%"></canvas>
-      </div>
-      <div class="position: absolute; top: 0; left: 0;width: 100%; height: 100%">
+
+
+      <div style="z-index: 2;position: absolute; top: 0; left: 0;width: 100%; height: 100%">
 
 
         <!-- A standard Twitter Bootstrap nav bar -->
@@ -164,9 +162,13 @@
           </div>
         </div>
       </div>
+      <div style="z-index: 1;position: fixed;width: 100%; height: 100%">
+        <canvas id="myCanvas" style="touch-action:none;width: 100%; height: 100%"></canvas>
+      </div>
+
     </div>
     <!-- </body> JS -->
-    <script type="text/javascript" src="css/bootstrap-5.3.2-dist 2/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/css/bootstrap_5_3_2/js/bootstrap.bundle.min.js"></script>
     <script>
     </script>
 </body>
