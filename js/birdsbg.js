@@ -10,13 +10,11 @@ var factor = 1 ;
 var speed = 3000 ; 
 var radius = 100 ; 
 var shift_x = 20  ; 
-var movement  = true ; 
 var shift_y = -20  ; 
 if(window.matchMedia("(max-width: 600px)").matches) {
   radius = 50 ; 
   shift_x = 20 ; 
-  shift_y = 0 ; 
-  movement = false ; 
+  shift_y = 0 ;  
 }
 
 if(myCanvas.width != myCanvas.clientWidth || myCanvas.height != myCanvas.clientHeight){
@@ -107,19 +105,23 @@ document.addEventListener("scroll", (event) => {
 
 function animate() {
   requestAnimationFrame( animate );
+  const interval = 1 / 60 ; 
   var delta = clock.getDelta();
   var time = Date.now() / speed ; 
   renderer.clearDepth();
+  // so we will seperate it to 2 numbers using this formula : 
+  if(time % 50 == 0 ){
+    factor =  Math.random() ; 
+  }
   var [angle1 , angle2 ] = [time  , time] ; 
   if ( mixer ) {
     mixer.update( delta );
-    if(movement){
-      parrot.position.x = sx + shift_x - 40  + Math.cos(angle1) * radius ;
-      parrot.position.y= sy + shift_y+ Math.sin(angle1) *  radius ; 
-      parrot.position.z = sz+ Math.sin(angle1) * radius ; 
-    }
+    parrot.position.x = sx + shift_x - 40  + Math.cos(angle1) * radius ;
+    parrot.position.y= sy + shift_y+ Math.sin(angle1) *  radius ; 
+    parrot.position.z = sz+ Math.sin(angle1) * radius ; 
     parrot.rotation.x =  Math.cos(angle1) * Math.PI/3
     parrot.rotation.y =  Math.cos(angle1) * Math.PI/6
+
   }
   renderer.render( scene, camera );
 
