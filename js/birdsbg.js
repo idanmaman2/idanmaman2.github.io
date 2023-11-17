@@ -15,7 +15,7 @@ if(window.matchMedia("(max-width: 600px)").matches) {
   radius = 50 ; 
   shift_x = 20 ; 
   shift_y = 0 ; 
-  speed *= 10 ; 
+  speed *= 50 ; 
 }
 
 if(myCanvas.width != myCanvas.clientWidth || myCanvas.height != myCanvas.clientHeight){
