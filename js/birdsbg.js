@@ -107,14 +107,9 @@ document.addEventListener("scroll", (event) => {
 
 function animate() {
   requestAnimationFrame( animate );
-  const interval = 1 / 60 ; 
   var delta = clock.getDelta();
   var time = Date.now() / speed ; 
   renderer.clearDepth();
-  // so we will seperate it to 2 numbers using this formula : 
-  if(time % 50 == 0 ){
-    factor =  Math.random() ; 
-  }
   var [angle1 , angle2 ] = [time  , time] ; 
   if ( mixer ) {
     mixer.update( delta );
@@ -123,10 +118,8 @@ function animate() {
       parrot.position.y= sy + shift_y+ Math.sin(angle1) *  radius ; 
       parrot.position.z = sz+ Math.sin(angle1) * radius ; 
     }
-      parrot.rotation.x =  Math.cos(angle1) * Math.PI/3
-      parrot.rotation.y =  Math.cos(angle1) * Math.PI/6
-    
-
+    parrot.rotation.x =  Math.cos(angle1) * Math.PI/3
+    parrot.rotation.y =  Math.cos(angle1) * Math.PI/6
   }
   renderer.render( scene, camera );
 
