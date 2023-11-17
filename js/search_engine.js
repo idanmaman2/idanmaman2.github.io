@@ -14,7 +14,7 @@ function doSearch() {
       let [title, url] = results[i];
       let elemlink = document.createElement('a');
       elemlink.innerText = title;
-      elemlink.setAttribute('href', url);
+      elemlink.setAttribute('href', url + `?search=${value}`);
       li.appendChild(elemlink);
       li.setAttribute('class' , 'list-group-item dropdown-item overflow-auto');
       ul.appendChild(li);
