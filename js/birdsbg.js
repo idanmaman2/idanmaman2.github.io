@@ -10,12 +10,13 @@ var factor = 1 ;
 var speed = 3000 ; 
 var radius = 100 ; 
 var shift_x = 20  ; 
+var movement  = true ; 
 var shift_y = -20  ; 
 if(window.matchMedia("(max-width: 600px)").matches) {
   radius = 50 ; 
   shift_x = 20 ; 
   shift_y = 0 ; 
-  speed *= 50 ; 
+  movement = false ; 
 }
 
 if(myCanvas.width != myCanvas.clientWidth || myCanvas.height != myCanvas.clientHeight){
@@ -117,11 +118,14 @@ function animate() {
   var [angle1 , angle2 ] = [time  , time] ; 
   if ( mixer ) {
     mixer.update( delta );
-    parrot.position.x = sx + shift_x - 40  + Math.cos(angle1) * radius ;
-    parrot.position.y= sy + shift_y+ Math.sin(angle1) *  radius ; 
-    parrot.position.z = sz+ Math.sin(angle1) * radius ; 
-    parrot.rotation.x =  Math.cos(angle1) * Math.PI/3
-    parrot.rotation.x =  Math.cos(angle1) * Math.PI/6
+    if(movement){
+      parrot.position.x = sx + shift_x - 40  + Math.cos(angle1) * radius ;
+      parrot.position.y= sy + shift_y+ Math.sin(angle1) *  radius ; 
+      parrot.position.z = sz+ Math.sin(angle1) * radius ; 
+    }
+      parrot.rotation.x =  Math.cos(angle1) * Math.PI/3
+      parrot.rotation.y =  Math.cos(angle1) * Math.PI/6
+    
 
   }
   renderer.render( scene, camera );
