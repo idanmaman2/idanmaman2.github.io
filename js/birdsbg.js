@@ -15,6 +15,7 @@ if(window.matchMedia("(max-width: 600px)").matches) {
   radius = 50 ; 
   shift_x = 20 ; 
   shift_y = 0 ; 
+  speed *= 10 ; 
 }
 
 if(myCanvas.width != myCanvas.clientWidth || myCanvas.height != myCanvas.clientHeight){
@@ -103,49 +104,28 @@ document.addEventListener("scroll", (event) => {
 });
 
 
-// ... (your existing code remains unchanged)
-
-// New flag to track whether animation is needed
-let animationNeeded = true;
-
-// Debounced scroll handler
-const debouncedScroll = debounce(() => {
-  // Set the flag to trigger animation update
-  animationNeeded = true;
-}, 200); // Adjust the wait time as needed
-
-document.addEventListener('scroll', debouncedScroll);
-
 function animate() {
-  requestAnimationFrame(animate);
-
-  // Only update the animation if the flag is set
-  if (animationNeeded) {
-    const interval = 1 / 60;
-    const delta = clock.getDelta();
-    const time = Date.now() / speed;
-    renderer.clearDepth();
-
-    if (time % 50 == 0) {
-      factor = Math.random();
-    }
-
-    const [angle1, angle2] = [time, time];
-
-    if (mixer) {
-      mixer.update(delta);
-      parrot.position.x = sx + shift_x - 40 + Math.cos(angle1) * radius;
-      parrot.position.y = sy + shift_y + Math.sin(angle1) * radius;
-      parrot.position.z = sz + Math.sin(angle1) * radius;
-      parrot.rotation.x = Math.cos(angle1) * Math.PI / 3;
-      parrot.rotation.x = Math.cos(angle1) * Math.PI / 6;
-    }
-
-    renderer.render(scene, camera);
-
-    // Reset the flag to avoid unnecessary updates
-    animationNeeded = false;
+  requestAnimationFrame( animate );
+  const interval = 1 / 60 ; 
+  var delta = clock.getDelta();
+  var time = Date.now() / speed ; 
+  renderer.clearDepth();
+  // so we will seperate it to 2 numbers using this formula : 
+  if(time % 50 == 0 ){
+    factor =  Math.random() ; 
   }
+  var [angle1 , angle2 ] = [time  , time] ; 
+  if ( mixer ) {
+    mixer.update( delta );
+    parrot.position.x = sx + shift_x - 40  + Math.cos(angle1) * radius ;
+    parrot.position.y= sy + shift_y+ Math.sin(angle1) *  radius ; 
+    parrot.position.z = sz+ Math.sin(angle1) * radius ; 
+    parrot.rotation.x =  Math.cos(angle1) * Math.PI/3
+    parrot.rotation.x =  Math.cos(angle1) * Math.PI/6
+
+  }
+  renderer.render( scene, camera );
+
 }
 
 
