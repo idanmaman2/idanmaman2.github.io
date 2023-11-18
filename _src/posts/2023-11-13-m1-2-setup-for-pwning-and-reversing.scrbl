@@ -46,18 +46,20 @@ Or if we want to directly use qemu - just
 later on I will show more things about qenu - this is the most basic form . 
 
 @section[#:style 'unnumbered]{Virtualization}
+@subsection[#:style 'unnumbered]{VmWare Fusion}
 For Virtualization I am using VMWare Fusion(12)
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-14 at 21.33.58.png"]
 Personaly I am using Windows 11 and Fedora . 
 Disclaimer: Windows 11 arm is sucks - you can't use a lot of tools becuase you can't run x64 drivers and any type of Remote process memory write didnt work for me in windows arm so a lot of tools like cmder doesn't work as well . 
-@subsection[#:style 'unnumbered]{Linux}
+@subsubsection{Linux}
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-14 at 21.37.44.png"]
-@subsection[#:style 'unnumbered]{Windows}
+@subsubsection{Windows}
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-14 at 21.39.10.png"]
 
 
 
 @section[#:style 'unnumbered]{Terminal}
+@subsection{Warp}
 At start I used the default terminal for a while - it is pretty nice but @bold{Warp}
 is a major upgrade to that . 
 link to warp : @hyperlink["warp.dev"]
@@ -65,9 +67,7 @@ so with warp you have AI chat  , tmux like windows spliting , warp supporting ss
 so it is pretty cool and have a realy nice gui and text complete so try it ! 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 0.59.30.png"]
 
-@section[#:style 'unnumbered]{Docker}
-so I can't say much - it works pretty nice , you can emualte x86 containers or use arm 
-it doesn't use the native kernel it is Virtualalized but it still works great . 
+
 
 @section[#:style 'unnumbered]{Packge Manager}
 @pygment-code[#:lang "bash"]{
@@ -78,36 +78,39 @@ it doesn't use the native kernel it is Virtualalized but it still works great .
 so most of ur real job will be probaly in linux - but for static analysis it will much nicer to use gui on macos . 
 so I will show a few tools - and mayn I will upload part B on linux later on . 
 @subsection[#:style 'unnumbered]{PE edit tools}
-@bold{PE BEAR}
+@subsubsection{PE BEAR}
 tool to analyze the PE format . 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.58.43.png"]
-@bold{PortEx}
+@subsubsection{PortEx}
 another tool to analyze the PE format with support of yara rules run in gui and rsrc files extraction and visualization of the enatropy of the sections . 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.56.17.png"]
-@bold{Detect It Easy}
+@subsubsection{Detect It Easy}
 tools to recognize the compilers , linkers , packers that used to create that PE . 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 3.09.36.png"]
 @subsection[#:style 'unnumbered]{ELF edit tools}
-@bold{XELFViewer}
+@subsubsection{XELFViewer}
 tool to analyze the ELF format 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 1.09.24.png"]
 @subsection[#:style 'unnumbered]{Reversing tools}
-@bold{IDA}
+@subsubsection{IDA}
 Interactive debuger to show the PE file code deassembled in graph mode and decompile it as well as advanced searches and tools and in the pro version there is option to add plugins and programming with python with the ida API . 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.54.52.png"]
-@bold{Ghidra}
+@subsubsection{Ghidra}
 Like ida - open source not like ida with better decompiling in some cases and free decompiling to all the archs . 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 1.05.59.png"]
 @subsection[#:style 'unnumbered]{Netowrk analyze tools}
-@bold{wireshark}
+@subsubsection{wireshark}
 packet analsis tool . 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 1.10.31.png"]
-@bold{burpsuite}
+@subsubsection{burpsuite}
 tool to research of web applications .
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 1.13.56.png"]
 @subsection[#:style 'unnumbered]{CLI tools}
-@bold{tshark}
-@bold{pev-tools : pestr , pecheck , peldd ... }
+@subsubsection{tshark}
+@subsubsection{pev-tools : pestr , pecheck , peldd ... }
 
 @section[#:style 'unnumbered]{Developing}
+@subsection{Docker}
+so I can't say much - it works pretty nice , you can emualte x86 containers or use arm 
+it doesn't use the native kernel it is Virtualalized but it still works great . 
 @section[#:style 'unnumbered]{Etc}
