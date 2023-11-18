@@ -165,7 +165,7 @@ function animate() {
   if(mobile){
     torusKnot.material.uniforms.color1.value.set(-Math.abs(Math.cos(angle1) * 256))
     torusKnot.material.uniforms.color2.value.set(Math.abs(Math.sin(angle1) * 256))
-    torusKnot.scale.setScalar( Math.sin(angle1) * radius/10);
+    torusKnot.scale.setScalar( Math.sin(angle1) * radius/5);
     torusKnot.tube = Math.sin(angle1) * radius ; 
     torusKnot.rotation.x =  Math.sin(angle1)  ;
     torusKnot.rotation.y=  Math.sin(angle1) ; 
