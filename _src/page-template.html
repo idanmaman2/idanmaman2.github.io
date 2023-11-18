@@ -137,7 +137,7 @@
               @list{<h1>Posts tagged <em>@|tag|</em></h1>})
               @;{ The main page contents are in @contents }
               @|contents|
-              <footer>
+              <footer class="bg-transparent">
                 <hr />
                 @(define (share-follow-button social_name link)
                 (let ([a "hello world"])
@@ -187,7 +187,7 @@
                 )
 
                 <p>@craft_my_socials[]</p>
-                <p>Site generated
+                <p class="bg-transparent">Site generated
                   by <a class="link-warning" href="https://github.com/greghendershott/frog">Frog</a>,
                   the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
                 <p>Using
@@ -199,8 +199,8 @@
           </div>
         </div>
       </div>
-      <div style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
-        <canvas id="myCanvas" style="position: sticky; top: 0; left: 0; touch-action: none; width: 100%; height: 100%;"></canvas>
+      <div style="position: sticky; width: 100%; height: 100%; overflow: hidden;">
+        <canvas id="myCanvas" style="touch-action:none;width: 100%; height: 100%"></canvas>
       </div>
 
     </div>

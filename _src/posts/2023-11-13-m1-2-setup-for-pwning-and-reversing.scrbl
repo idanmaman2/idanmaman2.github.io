@@ -12,7 +12,6 @@ So Today I am going to show you my setup .
 that will include :
 @table-of-contents[]
 
-
 <!-- more -->
 
 @section[#:style 'unnumbered]{Emulation}
@@ -64,17 +63,51 @@ is a major upgrade to that .
 link to warp : @hyperlink["warp.dev"]
 so with warp you have AI chat  , tmux like windows spliting , warp supporting ssh with bash/fish/zsh - that means you can use all warp's features with your remote machine . 
 so it is pretty cool and have a realy nice gui and text complete so try it ! 
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 0.59.30.png"]
+
 @section[#:style 'unnumbered]{Docker}
 so I can't say much - it works pretty nice , you can emualte x86 containers or use arm 
 it doesn't use the native kernel it is Virtualalized but it still works great . 
-@section[#:style 'unnumbered]{Reversing tools}
-so that is going to be a long section : 
 
+@section[#:style 'unnumbered]{Packge Manager}
+@pygment-code[#:lang "bash"]{
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+@section[#:style 'unnumbered]{Reversing and pwning}
+so most of ur real job will be probaly in linux - but for static analysis it will much nicer to use gui on macos . 
+so I will show a few tools - and mayn I will upload part B on linux later on . 
 @subsection[#:style 'unnumbered]{PE edit tools}
+@bold{PE BEAR}
+tool to analyze the PE format . 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.58.43.png"]
-@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.54.52.png"]
+@bold{PortEx}
+another tool to analyze the PE format with support of yara rules run in gui and rsrc files extraction and visualization of the enatropy of the sections . 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.56.17.png"]
+@bold{Detect It Easy}
+tools to recognize the compilers , linkers , packers that used to create that PE . 
 @image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 3.09.36.png"]
+@subsection[#:style 'unnumbered]{ELF edit tools}
+@bold{XELFViewer}
+tool to analyze the ELF format 
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 1.09.24.png"]
+@subsection[#:style 'unnumbered]{Reversing tools}
+@bold{IDA}
+Interactive debuger to show the PE file code deassembled in graph mode and decompile it as well as advanced searches and tools and in the pro version there is option to add plugins and programming with python with the ida API . 
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-16 at 2.54.52.png"]
+@bold{Ghidra}
+Like ida - open source not like ida with better decompiling in some cases and free decompiling to all the archs . 
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 1.05.59.png"]
+@subsection[#:style 'unnumbered]{Netowrk analyze tools}
+@bold{wireshark}
+packet analsis tool . 
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 1.10.31.png"]
+@bold{burpsuite}
+tool to research of web applications .
+@image["img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot 2023-11-19 at 1.13.56.png"]
+@subsection[#:style 'unnumbered]{CLI tools}
+@bold{tshark}
+@bold{pev-tools : pestr , pecheck , peldd ... }
 
 @section[#:style 'unnumbered]{Developing}
 @section[#:style 'unnumbered]{Etc}

@@ -8,10 +8,9 @@ So in this Post I will show How I setted up my blog .
 
 <!-- more -->
 
-@centered{
-    @bold{
-        I Am the real king
-    }
-    vad is a realy cool tree
-}
+Sup folks ? 
+
+So today I am going to show u how I setted up my blog with a bit of code review . 
+it will short and sharp review of how to set up static blog using frog and js libs . 
+
 

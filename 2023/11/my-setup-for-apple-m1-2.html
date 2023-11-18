@@ -151,10 +151,28 @@ that will include :
      <p><span class="hspace"></span></p></td></tr>
    <tr>
     <td>
-     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Reversing_tools%29">Reversing tools</a></p></td></tr>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Packge_.Manager%29">Packge Manager</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace"></span></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toptoclink" data-pltdoc="x" href="#%28part._.Reversing_and_pwning%29">Reversing and pwning</a></p></td></tr>
    <tr>
     <td>
      <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.P.E_edit_tools%29">PE edit tools</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.E.L.F_edit_tools%29">ELF edit tools</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.Reversing_tools%29">Reversing tools</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.Netowrk_analyze_tools%29">Netowrk analyze tools</a></p></td></tr>
+   <tr>
+    <td>
+     <p><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="toclink" data-pltdoc="x" href="#%28part._.C.L.I_tools%29">CLI tools</a></p></td></tr>
    <tr>
     <td>
      <p><span class="hspace"></span></p></td></tr>
@@ -228,23 +246,76 @@ Disclaimer: Windows 11 arm is sucks - you can&rsquo;t use a lot of tools becuase
 is a major upgrade to that .
 link to warp : <a href="warp.dev"></a>
 so with warp you have AI chat  , tmux like windows spliting , warp supporting ssh with bash/fish/zsh - that means you can use all warp&rsquo;s features with your remote machine .
-so it is pretty cool and have a realy nice gui and text complete so try it !</p>
+so it is pretty cool and have a realy nice gui and text complete so try it !
+<img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-19%20at%200.59.30.png" alt="" height="1898" width="2940" /></p>
 
 <h1><a name="(part._.Docker)"></a>Docker</h1>
 
 <p>so I can&rsquo;t say much - it works pretty nice , you can emualte x86 containers or use arm
 it doesn&rsquo;t use the native kernel it is Virtualalized but it still works great .</p>
 
-<h1><a name="(part._.Reversing_tools)"></a>Reversing tools</h1>
+<h1><a name="(part._.Packge_.Manager)"></a>Packge Manager</h1>
 
-<p>so that is going to be a long section :</p>
+<div class="brush: bash">
+ <div class="source">
+  <table class="sourcetable">
+   <tbody>
+    <tr>
+     <td class="linenos">
+      <div class="linenodiv">
+       <pre><span class="normal">1</span></pre></div></td>
+     <td class="code">
+      <div>
+       <pre><span></span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span>
+</pre></div></td></tr></tbody></table></div>
+
+</div>
+
+<h1><a name="(part._.Reversing_and_pwning)"></a>Reversing and pwning</h1>
+
+<p>so most of ur real job will be probaly in linux - but for static analysis it will much nicer to use gui on macos .
+so I will show a few tools - and mayn I will upload part B on linux later on .</p>
 
 <h2><a name="(part._.P.E_edit_tools)"></a>PE edit tools</h2>
 
-<p><img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-16%20at%202.58.43.png" alt="" height="1840" width="2936" />
-<img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-16%20at%202.54.52.png" alt="" height="1834" width="2428" />
+<p><span style="font-weight: bold">PE BEAR</span>
+tool to analyze the PE format .
+<img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-16%20at%202.58.43.png" alt="" height="1840" width="2936" />
+<span style="font-weight: bold">PortEx</span>
+another tool to analyze the PE format with support of yara rules run in gui and rsrc files extraction and visualization of the enatropy of the sections .
 <img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-16%20at%202.56.17.png" alt="" height="1602" width="2034" />
+<span style="font-weight: bold">Detect It Easy</span>
+tools to recognize the compilers , linkers , packers that used to create that PE .
 <img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-16%20at%203.09.36.png" alt="" height="1054" width="1448" /></p>
+
+<h2><a name="(part._.E.L.F_edit_tools)"></a>ELF edit tools</h2>
+
+<p><span style="font-weight: bold">XELFViewer</span>
+tool to analyze the ELF format
+<img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-19%20at%201.09.24.png" alt="" height="1316" width="1940" /></p>
+
+<h2><a name="(part._.Reversing_tools)"></a>Reversing tools</h2>
+
+<p><span style="font-weight: bold">IDA</span>
+Interactive debuger to show the PE file code deassembled in graph mode and decompile it as well as advanced searches and tools and in the pro version there is option to add plugins and programming with python with the ida API .
+<img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-16%20at%202.54.52.png" alt="" height="1834" width="2428" />
+<span style="font-weight: bold">Ghidra</span>
+Like ida - open source not like ida with better decompiling in some cases and free decompiling to all the archs .
+<img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-19%20at%201.05.59.png" alt="" height="1900" width="2928" /></p>
+
+<h2><a name="(part._.Netowrk_analyze_tools)"></a>Netowrk analyze tools</h2>
+
+<p><span style="font-weight: bold">wireshark</span>
+packet analsis tool .
+<img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-19%20at%201.10.31.png" alt="" height="1606" width="1934" />
+<span style="font-weight: bold">burpsuite</span>
+tool to research of web applications .
+<img src="/img/posts/2023-11-13-m1-2-setup-for-pwning-and-reversing/Screenshot%202023-11-19%20at%201.13.56.png" alt="" height="1896" width="2928" /></p>
+
+<h2><a name="(part._.C.L.I_tools)"></a>CLI tools</h2>
+
+<p><span style="font-weight: bold">tshark</span>
+<span style="font-weight: bold">pev-tools : pestr , pecheck , peldd ... </span></p>
 
 <h1><a name="(part._.Developing)"></a>Developing</h1>
 
@@ -298,7 +369,7 @@ it doesn&rsquo;t use the native kernel it is Virtualalized but it still works gr
   </footer>
   <script type="text/javascript" src="/js/text_highlight.js"></script>
 </article>
-              <footer>
+              <footer class="bg-transparent">
                 <hr />
                 <p><a href="https://t.me/IdanMaman" target="blank" title="social telegram"><i
                        class="fa-brands fa-bounce fa-xl  fa-telegram"></i></a>
@@ -309,7 +380,7 @@ it doesn&rsquo;t use the native kernel it is Virtualalized but it still works gr
                    <a href="https://twitter.com/idanmaman451180" target="blank" title="social twitter"><i
                        class="fa-brands fa-bounce fa-xl  fa-twitter"></i></a>
                 </p>
-                <p>Site generated
+                <p class="bg-transparent">Site generated
                   by <a class="link-warning" href="https://github.com/greghendershott/frog">Frog</a>,
                   the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
                 <p>Using
@@ -327,8 +398,8 @@ it doesn&rsquo;t use the native kernel it is Virtualalized but it still works gr
           </div>
         </div>
       </div>
-      <div style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
-        <canvas id="myCanvas" style="position: sticky; top: 0; left: 0; touch-action: none; width: 100%; height: 100%;"></canvas>
+      <div style="position: sticky; width: 100%; height: 100%; overflow: hidden;">
+        <canvas id="myCanvas" style="touch-action:none;width: 100%; height: 100%"></canvas>
       </div>
 
     </div>
