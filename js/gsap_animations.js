@@ -4,8 +4,8 @@ gsap.fromTo(`#gsap_author`,
                 x: "0px" ,
                 y : "0px",
                 color: "#000000" , 
-                duration: 3,
-                ease: "bounce",
+                duration: 1.5,
+                ease: "expo",
                 rotation: 360,
                 scale: 1,
 
@@ -17,9 +17,9 @@ setTimeout(function(){
                 x: "0px" ,
                 y : "0px",
                 display : "block", 
-                duration: 3 ,
+                duration: 1 ,
                 ease: "bounce",
 
 
             })
-} , 3000 ) 
+} , 1500 ) 
