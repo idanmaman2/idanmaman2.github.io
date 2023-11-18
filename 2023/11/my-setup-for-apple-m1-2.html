@@ -97,10 +97,11 @@
               <article>
   <header>
     <h1>My setup for apple M1/2</h1>
-    <p class='date-and-tags'>
+    <p class='date-and-tags' id="gsap_date">
 <time datetime="2023-11-14" pubdate="true">2023-11-14</time> :: <span class="tags"><a href="/tags/M1.html">M1</a>, <a href="/tags/M2.html">M2</a>, <a href="/tags/Pwning.html">Pwning</a>, <a href="/tags/Reversing.html">Reversing</a></span></p>
-    <p class='authors'>By: <span class="authors">Idan Maman</span></p>
+    <p class='authors' id="gsap_author">By: <span class="authors">Idan Maman</span></p>
   </header>
+  <div id="gsap_content" style="display:none;">
 
 <p>The source of this post is Scribble format (not Markdown) - SO YEY I guess or somethind IDC.</p>
 
@@ -320,11 +321,11 @@ tool to research of web applications .
 <h1><a name="(part._.Developing)"></a>Developing</h1>
 
 <h1><a name="(part._.Etc)"></a>Etc</h1>
+  </div>
   <footer>
     <hr />
     <h1 style="font-weight: lighter;">Comments</h1>
       <div id="disqus_thread"></div>
-
       <div>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -368,6 +369,9 @@ tool to research of web applications .
     </div>
   </footer>
   <script type="text/javascript" src="/js/text_highlight.js"></script>
+  <script type="text/javascript" src="/css/gsap-public/minified/gsap.min.js"></script>
+  <script type="text/javascript" src="/js/gsap_animations.js"></script>
+
 </article>
               <footer class="bg-transparent">
                 <hr />
@@ -406,6 +410,8 @@ tool to research of web applications .
     <!-- </body> JS -->
     <script type="text/javascript" src="/css/bootstrap_5_3_2/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="/js/search_engine.js"></script>
+
+
     <script type="module">
       import { search, default as init } from '/wasm_output/tinysearch_engine.js';
       window.search = search;
