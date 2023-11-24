@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "/css/threejs/three.module.js" ,
+          "OrbitControls" : "/css/threejs/plugins/OrbitControls.js" ,
+          "GLTFLoader" : "/css/threejs/plugins/GLTFLoader.js"
+        }
+      }
+    </script>
+
+  <title>complexPy</title>
+  <meta name="description" content="...">
+  <meta name="author" content="Idan Maman">
+  <meta name="keywords" content="Py, IDHMStyle">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://idanmaman2.github.io/2023/11/complexpy.html">
+  <link rel="next" href="/2023/11/my-setup-for-apple-m1-2.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap_5_3_2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+  <link rel="stylesheet" type="text/css" href="/css/custom.css">
+  <link href="/css/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+  <link href="/css/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+  <link href="/css/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <div style="position: relative;width: 100%; height: 100%">
+    <div>
+
+
+      <div style="z-index: 2;position: absolute; top: 0; left: 0;width: 100%; height: 100%">
+
+
+        <!-- A standard Twitter Bootstrap nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background:conic-gradient(#fd6666 0deg, #fd6666 72deg, #ffc556 72deg, #ffc556 144deg, #75fd71 144deg, #75fd71 216deg, #5d97fb 216deg , #5d97fb 288deg , #7dcaf9 288deg);">
+          <div class="container-fluid">
+            <a href="/index.html" class="navbar-brand">
+              <img src="/img/logo_clear.png" alt="logo" width="100" height="100">
+              <span class="gradient-text">IDHM's Blog</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">
+                    Tags <b class="caret"></b>
+                  </a>
+
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item text-dark" href="/">all</a>
+                    <a class="dropdown-item text-dark" href="/tags/Blog.html">Blog</a><a class="dropdown-item text-dark" href="/tags/Frog.html">Frog</a><a class="dropdown-item text-dark" href="/tags/IDHMStyle.html">IDHMStyle</a><a class="dropdown-item text-dark" href="/tags/M1.html">M1</a><a class="dropdown-item text-dark" href="/tags/M2.html">M2</a><a class="dropdown-item text-dark" href="/tags/MD.html">MD</a><a class="dropdown-item text-dark" href="/tags/Pwning.html">Pwning</a><a class="dropdown-item text-dark" href="/tags/Py.html">Py</a><a class="dropdown-item text-dark" href="/tags/Racket.html">Racket</a><a class="dropdown-item text-dark" href="/tags/Reversing.html">Reversing</a><a class="dropdown-item text-dark" href="/tags/Scribble.html">Scribble</a>
+                  </div>
+                </li>
+                <li >
+                  <a class="nav-link text-dark" href="/About.html" >About</a>
+                </li> 
+              </ul>
+
+
+              <li class="dropdown nav-link ">
+                <input id="demo" onkeyup="doSearch()" class="dropdown-toggle form-control"
+                onfocus="showDropdown()" onblur="hideDropdown()"
+                data-bs-toggle="dropdown" type="search" placeholder="Search" aria-label="Search">
+
+                <ul tabindex="-1" style="width:100%;" class="dropdown-menu bg-transparent list-group border-0" id="results"></ul>
+
+              </li>
+
+
+
+            </div>
+          </div>
+        </nav>
+        <div>
+
+
+          <div class="container" style="margin-bottom:5vh;margin-top:5vh;" class="row">
+            <!-- Main column -->
+            <div id="content" class="col-md-12">
+
+
+
+              <article>
+  <link rel="stylesheet" type="text/css" href="/css/post_costum.css">
+
+
+  <header>
+    <h1>complexPy</h1>
+    <p class='date-and-tags' id="gsap_date">
+<time datetime="2023-11-20" pubdate="true">2023-11-20</time> :: <span class="tags"><a href="/tags/Py.html">Py</a>, <a href="/tags/IDHMStyle.html">IDHMStyle</a></span></p>
+    <p class='authors' id="gsap_author">By: <span class="authors">Idan Maman</span></p>
+  </header>
+  <div id="gsap_content" style="display:none; ">
+    <!--more-->
+
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td></td></tr></tbody></table>
+
+<div class="brush: python">
+ <div class="source">
+  <table class="sourcetable">
+   <tbody>
+    <tr>
+     <td class="linenos">
+      <div class="linenodiv">
+       <pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span></pre></div></td>
+     <td class="code">
+      <div>
+       <pre><span></span><span class="kn">import</span> <span class="nn">timeit</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="k">def</span> <span class="nf">isprime1</span><span class="p">(</span><span class="n">r</span> <span class="p">:</span> <span class="nb">int</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nb">bool</span> <span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]]):</span>
+    <span class="n">divs</span> <span class="o">=</span>  <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">r</span><span class="o">%</span><span class="n">x</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">isprime1</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="p">,</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">r</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">divs</span><span class="p">),</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">,</span><span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">z</span> <span class="p">:</span> <span class="ow">not</span> <span class="n">r</span> <span class="o">%</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="n">z</span> <span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="p">))</span> <span class="p">,</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="ow">not</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">r</span> <span class="p">),</span><span class="n">divs</span><span class="p">))))</span>
+
+<span class="k">def</span> <span class="nf">isprime2</span><span class="p">(</span><span class="n">r</span> <span class="p">:</span> <span class="nb">int</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nb">bool</span> <span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]]):</span>
+    <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span> <span class="nb">__import__</span><span class="p">(</span><span class="s2">"itertools"</span><span class="p">)</span><span class="o">.</span><span class="n">tee</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span> <span class="p">:</span> <span class="ow">not</span><span class="p">(</span><span class="n">r</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span> <span class="p">,</span>  <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="o">-</span><span class="mi">1</span> <span class="p">,</span><span class="mi">1</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)))</span>
+    <span class="k">return</span> <span class="p">(</span><span class="kc">True</span><span class="p">,((</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">),))</span> <span class="k">if</span>  <span class="nb">all</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">r</span><span class="o">%</span><span class="n">x</span> <span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">))</span> <span class="k">else</span> <span class="p">(</span><span class="kc">False</span> <span class="p">,</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">__import__</span><span class="p">(</span><span class="s2">"functools"</span><span class="p">)</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">x</span> <span class="o">|</span> <span class="p">{</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">+</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]},</span> <span class="n">isprime2</span><span class="p">(</span><span class="n">r</span><span class="o">//</span><span class="nb">next</span><span class="p">(</span><span class="n">a</span><span class="p">))[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">isprime2</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">b</span><span class="p">))[</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span> <span class="nb">__import__</span><span class="p">(</span><span class="s2">"collections"</span><span class="p">)</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">))</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+
+<span class="k">def</span> <span class="nf">isprime3</span><span class="p">(</span><span class="n">r</span> <span class="p">:</span> <span class="nb">int</span> <span class="p">)</span><span class="o">-&gt;</span> <span class="p">(</span><span class="nb">bool</span> <span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]]):</span>
+    <span class="n">total</span> <span class="o">=</span>  <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">isprime</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">def</span> <span class="nf">iterate_prime</span><span class="p">(</span><span class="n">prime</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">bool</span><span class="p">):</span>
+        <span class="n">isprime2</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="n">isprime</span> <span class="p">,</span><span class="n">r</span>
+        <span class="k">while</span> <span class="ow">not</span><span class="p">(</span><span class="n">z</span> <span class="o">%</span> <span class="n">prime</span><span class="p">)</span> <span class="p">:</span>
+            <span class="n">isprime2</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">total</span><span class="p">[</span><span class="n">prime</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">//</span> <span class="n">prime</span>
+        <span class="k">return</span> <span class="n">z</span><span class="p">,</span> <span class="n">isprime2</span>
+    <span class="n">r</span><span class="p">,</span><span class="n">isprime</span><span class="o">=</span><span class="n">iterate_prime</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">r</span><span class="p">))</span> <span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">r</span><span class="p">,</span><span class="n">isprime</span> <span class="o">=</span><span class="n">iterate_prime</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span> <span class="o">&lt;=</span> <span class="mi">2</span>  <span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span><span class="mi">2</span> <span class="p">:</span>
+        <span class="n">total</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">isprime</span><span class="p">,</span>  <span class="nb">tuple</span><span class="p">(</span><span class="n">total</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">check_me</span><span class="p">(</span><span class="n">sep</span><span class="p">:</span> <span class="p">(</span><span class="nb">bool</span> <span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="p">,</span> <span class="n">r</span> <span class="p">:</span><span class="nb">int</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span> <span class="p">:</span>
+    <span class="k">return</span>   <span class="p">(</span><span class="n">sep</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">r</span><span class="o">%</span><span class="n">x</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">r</span><span class="p">)))</span> <span class="p">)</span>   <span class="ow">or</span>  <span class="nb">__import__</span><span class="p">(</span><span class="s2">"functools"</span><span class="p">)</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span>  <span class="p">,</span><span class="n">y</span> <span class="p">:</span><span class="n">x</span> <span class="o">*</span>  <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">**</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span><span class="n">sep</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span><span class="mi">1</span><span class="p">)</span>  <span class="o">==</span> <span class="n">r</span>
+
+<span class="n">TESTS</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">primes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">"isprime\d+"</span> <span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="p">,</span> <span class="nb">globals</span><span class="p">()</span> <span class="p">)))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">TESTS</span><span class="p">):</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"==============</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">=============="</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">primes</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">globals</span><span class="p">()[</span><span class="sa">f</span><span class="s2">"result</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span><span class="o">=</span><span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">stmt</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;isprime</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">(</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="nb">globals</span><span class="o">=</span><span class="nb">globals</span><span class="p">()</span> <span class="p">,</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1000</span> <span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">primes</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"res</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> "</span> <span class="p">,</span> <span class="nb">globals</span><span class="p">()[</span><span class="sa">f</span><span class="s2">"result</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">]</span> <span class="p">,</span> <span class="nb">globals</span><span class="p">()[</span><span class="sa">f</span><span class="s2">"isprime</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">](</span><span class="n">num</span><span class="p">),</span><span class="n">check_me</span><span class="p">(</span><span class="nb">globals</span><span class="p">()[</span><span class="sa">f</span><span class="s2">"isprime</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">](</span><span class="n">num</span><span class="p">)</span> <span class="p">,</span><span class="n">num</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i1</span><span class="p">,</span><span class="n">i2</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">primes</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">exec</span><span class="p">(</span><span class="sa">f</span><span class="s2">"print(&#39;res</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s2">&#39; ,result</span><span class="si">{</span><span class="n">i1</span><span class="si">}</span><span class="s2"> / result</span><span class="si">{</span><span class="n">i2</span><span class="si">}</span><span class="s2">)"</span><span class="p">,</span><span class="nb">globals</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"==============</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">=============="</span><span class="p">)</span>
+</pre></div></td></tr></tbody></table></div>
+
+</div>
+
+<p>so let&rsquo;s see the refactored way and how the "Sachi" people write this code</p>
+
+<p>must know functions :</p>
+
+<p>must know shortcuts :</p>
+
+<p>must know ugly code style :</p>
+
+<p>must know moudles :</p>
+  </div>
+  <footer>
+    <hr />
+    <h1 style="font-weight: lighter;">Comments</h1>
+      <div id="disqus_thread"></div>
+      <div>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_config = function () {
+            this.page.identifier = undefined;
+            this.page.url = undefined;
+            this.page.title = undefined;
+            this.page.category_id = undefined;
+          };
+          var disqus_shortname = 'idhm-blog';
+          (function() {
+              var dsq = document.createElement('script');
+              dsq.type = 'text/javascript';
+              dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              dsq.setAttribute('data-timestamp', +new Date());
+              (document.head || document.body).appendChild(dsq);
+          })();
+        </script>
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+      <div  class="blogs_dir" style="width:100%;display: flex;justify-content: center; align-items: center;">
+        <div class="row justify-content-center">
+          <nav aria-label="Page Navigation">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="/2023/11/my-setup-for-apple-m1-2.html"
+                   aria-label="Previous">
+                  <span aria-hidden="true">&larr; My setup for apple M1/2</span>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <script type="text/javascript" src="/js/text_highlight.js"></script>
+  <script type="text/javascript" src="/css/gsap-public/minified/gsap.min.js"></script>
+  <script type="text/javascript" src="/js/gsap_animations.js"></script>
+
+</article>
+              <footer class="bg-transparent">
+                <hr />
+                <p><a href="https://t.me/IdanMaman" target="blank" title="social telegram"><i
+                       class="fa-brands fa-bounce fa-xl  fa-telegram"></i></a>
+                   <a href="https://github.com/idanmaman2" target="blank" title="social github"><i
+                       class="fa-brands fa-bounce fa-xl  fa-github"></i></a>
+                   <a href="https://www.linkedin.com/in/idan-maman-bb4b771bb" target="blank" title="social linkedin"><i
+                       class="fa-brands fa-bounce fa-xl  fa-linkedin"></i></a>
+                   <a href="https://twitter.com/idanmaman451180" target="blank" title="social twitter"><i
+                       class="fa-brands fa-bounce fa-xl  fa-twitter"></i></a>
+                </p>
+                <p class="bg-transparent">Site generated
+                  by <a class="link-warning" href="https://github.com/greghendershott/frog">Frog</a>,
+                  the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+                <p>Using
+                <ul class="list-unstyled"><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://endler.dev/2019/tinysearch">
+                                              tinysearch </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://pygments.org/">
+                                                                       pygments </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://getbootstrap.com/">
+                                                                                              Bootstrap 5.3.2 </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://threejs.org/">
+                                                                                                                            three.js </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://fontawesome.com/">
+                                                                                                                                                   FontAwesome </a> </li><li class="ms-5"><i class="fa-solid fa-copyright"></i> <a class="link-warning" href="https://gsap.com/">
+                                                                                                                                                                             gsap </a> </li></ul>
+                </p>
+                <p><em>All the content is under the MIT license use it how u want how much u want </em>.</p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="position: sticky; width: 100%; height: 100%; overflow: hidden;">
+        <canvas id="myCanvas" style="touch-action:none;width: 100%; height: 100%"></canvas>
+      </div>
+
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="/css/bootstrap_5_3_2/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/js/search_engine.js"></script>
+
+
+    <script type="module">
+      import { search, default as init } from '/wasm_output/tinysearch_engine.js';
+      window.search = search;
+      async function run() {
+        await init('/wasm_output/tinysearch_engine_bg.wasm');
+      }
+
+      run();
+    </script>
+
+
+    <script>
+    </script>
+</body>
+
+</html>

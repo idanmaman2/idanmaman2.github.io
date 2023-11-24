@@ -1,4 +1,18 @@
 /* custom.css */
+@import url("http://fonts.googleapis.com/css?family=Kalam:400,300,700");
+@import url("http://fonts.googleapis.com/css?family=Handjet:400,300,700");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:400,300,700&display=swap");
+
+.container{
+    font-family: 'Kalam', sans-serif !important;
+   
+}
+.navbar{
+    font-family: 'Handjet', sans-serif !important;
+} 
+#gsap_content{
+    font-family: 'Open Sans', sans-serif !important;
+}
 
 code {
     color: black;
@@ -83,4 +97,8 @@ color: #ffacb7;
     justify-content: center!important; 
     align-items: center!important;
 }
-
+.bird-theme{
+    --fa-secondary-opacity: 1.0;
+    --fa-primary-color: red;
+    --fa-secondary-color: yellow;
+} 

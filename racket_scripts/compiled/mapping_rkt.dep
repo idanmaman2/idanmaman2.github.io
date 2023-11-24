@@ -1,0 +1,1 @@
+("8.10" tarm64osx ("74ccecc4967d5e4c669861fda019eb66dfd8993f" . "91e4a3a177656892ba9b787ebc93ea24fa701dc0") (collects #"html-parsing" #"main.rkt") (collects #"json" #"main.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"list.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"string.rkt"))

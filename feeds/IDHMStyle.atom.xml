@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">IDHM.Blog: Posts tagged 'IDHMStyle'</title>
+ <link rel="self" href="https://idanmaman2.github.io/feeds/IDHMStyle.atom.xml" />
+ <link href="https://idanmaman2.github.io/tags/IDHMStyle.html" />
+ <id>urn:https-idanmaman2-github-io:-tags-IDHMStyle-html</id>
+ <updated>2023-11-20T18:41:34Z</updated>
+ <entry>
+  <title type="text">complexPy</title>
+  <link rel="alternate" href="https://idanmaman2.github.io/2023/11/complexpy.html?utm_source=IDHMStyle&amp;utm_medium=Atom" />
+  <id>urn:https-idanmaman2-github-io:-2023-11-complexpy-html</id>
+  <published>2023-11-20T18:41:34Z</published>
+  <updated>2023-11-20T18:41:34Z</updated>
+  <author>
+   <name>Idan Maman</name></author>
+  <content type="html">&lt;a href="https://idanmaman2.github.io/2023/11/complexpy.html?utm_source=IDHMStyle&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

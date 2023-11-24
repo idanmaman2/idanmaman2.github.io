@@ -4,13 +4,22 @@
  <link rel="self" href="https://idanmaman2.github.io/feeds/all.atom.xml" />
  <link href="https://idanmaman2.github.io/index.html" />
  <id>urn:https-idanmaman2-github-io:-index-html</id>
- <updated>2023-11-14T08:58:33Z</updated>
+ <updated>2023-11-20T18:41:34Z</updated>
+ <entry>
+  <title type="text">complexPy</title>
+  <link rel="alternate" href="https://idanmaman2.github.io/2023/11/complexpy.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-idanmaman2-github-io:-2023-11-complexpy-html</id>
+  <published>2023-11-20T18:41:34Z</published>
+  <updated>2023-11-20T18:41:34Z</updated>
+  <author>
+   <name>Idan Maman</name></author>
+  <content type="html">&lt;a href="https://idanmaman2.github.io/2023/11/complexpy.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">My setup for apple M1/2</title>
   <link rel="alternate" href="https://idanmaman2.github.io/2023/11/my-setup-for-apple-m1-2.html?utm_source=all&amp;utm_medium=Atom" />
   <id>urn:https-idanmaman2-github-io:-2023-11-my-setup-for-apple-m1-2-html</id>
-  <published>2023-11-14T08:58:33Z</published>
-  <updated>2023-11-14T08:58:33Z</updated>
+  <published>2023-11-14T14:58:33Z</published>
+  <updated>2023-11-14T14:58:33Z</updated>
   <author>
    <name>Idan Maman</name></author>
   <content type="html">
@@ -134,8 +143,8 @@ that will include :
   <title type="text">HI - Blog setup</title>
   <link rel="alternate" href="https://idanmaman2.github.io/2023/11/hi-blog-setup.html?utm_source=all&amp;utm_medium=Atom" />
   <id>urn:https-idanmaman2-github-io:-2023-11-hi-blog-setup-html</id>
-  <published>2023-11-12T16:00:00Z</published>
-  <updated>2023-11-12T16:00:00Z</updated>
+  <published>2023-11-12T22:00:00Z</published>
+  <updated>2023-11-12T22:00:00Z</updated>
   <author>
    <name>Idan Maman</name></author>
   <content type="html">
